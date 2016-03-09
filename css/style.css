@@ -1,0 +1,240 @@
+
+.wrapper{
+	background-image: url(../images/game-background.jpg);
+	height: 480px;
+	width: 640px;
+	position: relative;
+}
+.input{
+	margin-top: 12px;
+}
+
+.headpiece{
+	background-image: url(../images/headpiece.png);
+	height: 480px;
+	width: 640px;
+	position: relative;
+	z-index: 2000;
+}
+
+
+.head_animate{
+	background-image: url(../images/catcher.png) ;
+	background-size: cover;
+	height: 150px;
+	width: 112px;
+	margin: 0 auto;	
+	margin-left: 0px;
+    margin-top: 0px;
+    bottom: 268px;
+    left: 273px;
+    position: absolute;
+
+animation: animationFrames linear 0.8s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: animationFrames linear 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: animationFrames linear 0.8s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+}
+
+@keyframes animationFrames{
+  0% {
+    transform:  rotate(15deg) ;
+  }
+
+  25% {
+    transform:  rotate(0deg) ;
+  }
+
+  50% {
+    transform:  rotate(-15deg) ;
+  }
+
+  75%{
+	transform:  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  rotate(15deg) ;
+  }
+}
+
+@-moz-keyframes animationFrames{
+    0% {
+    -moz-transform:  rotate(15deg) ;
+  }
+
+  25% {
+    -moz-transform:  rotate(0deg) ;
+  }
+
+  50% {
+    -moz-transform:  rotate(-15deg) ;
+  }
+
+  75%{
+	-moz-transform:  rotate(0deg) ;
+  }
+
+  100% {
+    -moz-transform:  rotate(15deg) ;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    -webkit-transform:  rotate(15deg) ;
+  }
+
+  25% {
+    -webkit-transform:  rotate(0deg) ;
+  }
+
+  50% {
+      -webkit-transform:  rotate(-15deg) ;
+  }
+
+  75%{
+	-webkit-transform:  rotate(0deg) ;
+  }
+
+  100% {
+    -webkit-transform:  rotate(15deg) ;
+  }
+}
+
+
+.start_button{
+	background-image: url(../images/playButton.png) ;
+	height: 160px;
+	width: 320px;
+	margin: 0 auto;	
+	top: 140px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.whore{
+	background-image: url(../images/whore.png);
+	height: 75px;
+	width: 36px;
+	/*margin-left: 0px;
+    margin-top: 0px;*/
+    /*left: 285px;*/
+    /*bottom: 70px;*/
+    position: absolute;
+
+}
+.catcher{
+	/*background-image: url(../images/catcher.png) ;*/
+	background-image: url(../images/basket.png) ;
+
+	background-size: cover;
+	height: 66px;
+	width: 70px;	
+	margin-left: 0px;
+    margin-top: 0px;
+    bottom: 70px;
+    left: 285px;
+	position: absolute;
+}
+.catcher-basket{
+	/*background-image: url(../images/catcher.png) ;*/
+	background-image: url(../images/catcher_walk.gif) ;
+	background-size: cover;
+	height: 110px;
+	width: 70px;	
+	margin-left: 0px;
+    margin-top: 0px;
+    bottom: 70px;
+    left: 235px;
+	position: absolute;
+}
+.catcher-head{
+	/*background-image: url(../images/catcher.png) ;*/
+	background-image: url(../images/catcher.png) ;
+
+	background-size: cover;
+	height: 35px;
+	width: 25px;	
+	margin-left: 0px;
+    margin-top: 0px;
+    bottom: 151px;
+    left: 256px;
+	position: absolute;
+}
+
+.left-direction{
+	-moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+
+.right-direction{
+	-moz-transform: scaleX(1);
+   -o-transform: scaleX(1);
+   -webkit-transform: scaleX(1);
+   transform: scaleX(1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+.finish{
+  background-image: url(../images/headpiece.png);
+  background-size: cover;
+  height: 250px;
+  width: 380px;
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  top: 90px;
+
+}
+.total_whore , .total_time{
+  margin: 0 auto;
+  position: relative;
+}
+
+.whore-counter{
+	padding: 5px 15px;
+	font-weight: bold;
+	color: white;
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 100;
+
+}
+.live-counter{
+	background-image: url(../images/catcher.png) ;
+	padding: 5px 15px;
+	font-weight: bold;
+	color: white;
+	top: 15px;
+	left: 15px;
+	z-index: 100;
+	background-size: cover;
+	height: 39px;
+	width: 10px;	
+	position: absolute;
+}
+span{
+	position: absolute;
+	left: 43px;
+	top: 10px;
+	font-size: 30px;
+	width: 40px;
+}
+
+.finish-wrapper .finish {
+  display: block;
+
+}
