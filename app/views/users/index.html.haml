@@ -1,0 +1,43 @@
+!!!
+%html{:lang => "ru"}
+  %head
+    %meta{:charset => "UTF-8"}/
+    %title Whore catcher
+    -#%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
+    -#%script{:src => "js/script.js", :type => "text/javascript"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Muli", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  %body
+    .wrapper
+      .headpiece
+        %h1 Шлюхолов v2
+        .head_animate
+        .start_button
+      .whore-counter ШЛЮХ: 0
+      .live-counter
+        %span x 3
+      .catcher.right-direction
+      .catcher-basket.right-direction
+      .catcher-head.right-direction
+      %audio{:autoplay => "", :loop => "", :src => "audio/megatrack.mp3"}
+      .finish
+        .total_whore ШЛЮХ: 0
+        .total_time Время игры:
+        /
+          <div class="developers">
+          <p>Project Manager:  Seich'</p>
+          <p>Developer: Tatskiy A.</p>
+          <p>Junior: Bagaadziev S.</p>
+          </div>
+        .content
+          .visible
+            %p
+              Developer
+            %ul
+              %li
+                Tsybulnikov A.
+              %li
+                Tatskiy A.
+              %li
+                Bagaadziev S.
