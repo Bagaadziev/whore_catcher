@@ -207,6 +207,8 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v1.0.7, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_admin (v0.8.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails_stdout_logging (v0.0.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v11.1.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="remotipart (v1.2.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />

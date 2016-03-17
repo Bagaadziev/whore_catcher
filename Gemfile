@@ -18,6 +18,7 @@ gem 'bower-rails'                                         # Bower support for Ra
 gem 'rails_admin'                                         # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
 gem 'twitter-bootstrap-rails'
 gem 'rails_admin'
+gem 'rails_12factor'
 gem 'kaminari'                                            # Pagination
 gem 'bootstrap-kaminari-views'
 gem 'andand'                                              # And get a guarded method invocation or safe navigation method. This snippet performs a .find on the Location class, then sends .phone to the result if the result is not nil. If the result is nil, then the expression returns nil without throwing a NoMethodError.
