@@ -16,7 +16,7 @@ gem 'inherited_resources'                                 # It makes your contro
 gem 'cancancan'                                           # CanCan is an authorization library for Ruby on Rails which restricts what resources a given user is allowed to access
 gem 'bower-rails'                                         # Bower support for Rails projects. Dependency file is bower.json in Rails root dir or Bowerfile if you use DSL
 gem 'rails_admin'                                         # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data.
-gem 'devise'
+gem 'twitter-bootstrap-rails'
 gem 'rails_admin'
 gem 'kaminari'                                            # Pagination
 gem 'bootstrap-kaminari-views'
@@ -25,6 +25,8 @@ gem 'carrierwave'                                         # This gem provides a 
 gem 'simple_form'                                         # Forms made easy!
 gem 'mini_magick'                                         # A ruby wrapper for ImageMagick or GraphicsMagick command line.
 gem 'devise'                                              # Devise is a flexible authentication solution for Rails based on Warden.
+gem 'omniauth-vkontakte'
+gem 'omniauth'
 gem 'kaminari'                                            # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+
 gem 'jquery-ui-rails'                                     # jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline
 gem 'humanize_boolean'                                    # Adds the humanize method for true and false to provide 'Yes' and 'No' respectively.
