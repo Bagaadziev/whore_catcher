@@ -17,49 +17,46 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
-  def self.find_for_oauth(auth, signed_in_resource = nil)
+  def self.find_for_vkontakte_oauth(auth)
+    puts '==========>'
+    puts auth
+    puts '==========>'
 
-    # Получить identity пользователя, если он уже существует
-    identity = Identity.find_for_oauth(auth)
 
-    # Если signed_in_resource предоставлен оно всегда переписывает существующего пользователя
-    # что бы identity не была закрыта случайно созданным аккаунтом.
-    # Заметьте, что это может оставить зомби-аккаунты (без прикрепленной identity)
-    # которые позже могут быть удалены
-    user = signed_in_resource ? signed_in_resource : identity.user
+    puts '=========>'
+    puts Identity.find_for_oauth(auth)
+    user = Identity.find_for_oauth(auth).user
+    puts user
+    puts '=========>'
 
-    # Создать пользователя, если нужно
-    if user.nil?
+    if user.present?
+      user
+    else
+      puts '<<<<<<<=-=-=-=-==-=-=-=-=='
+      puts auth.info.inspect
+      puts auth.info.email
+      puts auth.info.first_name.inspect
+      puts auth.info.last_name.inspect
+      user = User.create!({ name: [auth.info.first_name, auth.info.last_name].join(' '), email: auth.info.email, password: Devise.friendly_token[0,20], confirmed_at: Time.now.utc})
 
-      # Получить email пользователя, если его предоставляет провайдер
-      # Если email не был предоставлен мы даем пользователю временный и просим
-      # пользователя установить и подтвердить новый в следующим шаге через UsersController.finish_signup
-      email_is_verified = auth.info.email && (auth.info.verified || auth.info.verified_email)
-      email = auth.info.email if email_is_verified
-      user = User.where(:email => email).first if email
-
-      # Создать пользователя, если это новая запись
-      if user.nil?
-        user = User.new(
-            name: auth.extra.raw_info.name,
-            #username: auth.info.nickname || auth.uid,
-            email: email ? email : "#{TEMP_EMAIL_PREFIX}-#{auth.uid}-#{auth.provider}.com",
-            password: Devise.friendly_token[0,20]
-        )
-        user.skip_confirmation!
-        user.save!
-      end
+      puts user.inspect
+      return user
+      #
+      # Identity.create({})
     end
 
-    # Связать identity с пользователем, если необходимо
-    if identity.user != user
-      identity.user = user
-      identity.save!
-    end
-    user
+    self.check_user_exists
+
+
+    # if user = User.where(:url => access_token.info.urls.Vkontakte).first
+    #   user
+    # else
+    #   User.create!(:provider => access_token.provider, :url => access_token.info.urls.Vkontakte, :username => access_token.info.name, :nickname => access_token.extra.raw_info.domain, :email => access_token.extra.raw_info.domain+'@vk.com', :password => Devise.friendly_token[0,20])
+    # end
   end
 
   def email_verified?
     self.email && self.email !~ TEMP_EMAIL_REGEX
   end
+
 end

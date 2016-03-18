@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'user/index', as: 'user_root'
+  get 'users/index', as: 'user_root'
 
   resources :users, :only => [:index, :destroy]
   root 'users#index'
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
-  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
+  devise_for :users, :controllers => { :omniauth_callbacks => 'auth/omniauth_callbacks' }
 
 
   # The priority is based upon order of creation: first created -> highest priority.
