@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/index', as: 'user_root'
 
-  resources :users, :only => [:index, :destroy]
-  root 'users#index'
+  resources :scores
+
+  root 'comon#index'
+  get 'comon/index'
 
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 

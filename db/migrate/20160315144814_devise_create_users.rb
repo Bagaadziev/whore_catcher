@@ -5,8 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string      :email,              null: false,  default: ""
       t.string      :name,               null: false,  default: ""
       t.string      :encrypted_password, null: false,  default: ""
-      t.integer     :score,              index: true
-      t.integer     :total_time,         index: true
+
 
       ## Recoverable
       t.string   :reset_password_token

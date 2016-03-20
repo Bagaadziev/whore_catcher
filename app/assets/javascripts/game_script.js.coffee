@@ -1,3 +1,4 @@
+
 $(document).ready ->
   min_rand = 18
   max_rand = 632
@@ -36,8 +37,34 @@ $(document).ready ->
     true
 
   whore_animation = ->
-    timerId = setInterval((->
+    console.log 'whore_animation'
+    window.timerId = setInterval((->
       total_time += 50
+      if lives < 1
+        console.log '====== temer ====>>>'
+        clearInterval window.timerId
+        console.log '==========>>>'
+        console.log window.timerId
+
+        $.ajax
+          method: 'POST'
+          dataType: "json"
+          url: "/scores"
+          data: { score: { total_time: total_time, whore_count: counter }}
+          success: (response) =>
+            $('.whore').remove()
+            $('.wrapper').addClass('finish-wrapper').slideDown 'slow'
+            $('.total_time').html 'Время игры: ' + total_time / 1000
+            console.log counter
+            $('.total_whore').html 'ШЛЮХ: ' + counter
+            console.log '=-=-==>>>>>>'
+            console.log timerId
+            $.getJSON '/scores', (data) =>
+              $.each data, (i, score) ->
+                $('.scores').append("<li>#{i})<b>#{score.whore_count}</b> >#{score.user.name} (#{score.total_time / 1000})</li>")
+
+              false
+
       $.each $('.whore'), (i, whore) ->
         $whore = $(whore)
         $whore.animate { 'top': '+=5px' }, 50
@@ -48,29 +75,18 @@ $(document).ready ->
           $('.whore-counter').html 'ШЛЮХ: ' + counter
           $whore.remove()
           whore_builder()
-          console.log counter / counter_whore
           if counter / counter_whore > 0.8
             whore_builder()
         else if $whore.position().top > 400
           lives -= 1
-          console.log lives
           $('.live-counter span').text 'x ' + lives
           $whore.remove()
           whore_builder()
-          if lives < 1
-            $('.whore').remove()
-            $('.wrapper').addClass('finish-wrapper').slideDown 'slow'
-            $('.total_time').html 'Время игры: ' + total_time / 1000
-            console.log counter
-            $('.total_whore').html 'ШЛЮХ: ' + counter
-            console.log '=-=-==>>>>>>'
-            console.log timerId
-            clearInterval timerId
-        # alert('finish!');
-        # alert('Время игры ' + (total_time/1000) + ' секунд'+ '\n' +'Поймано шлюх: '+ counter);
-        return
-      return
     ), 50)
+    console.log '!!! timerId !!!!'
+    console.log  window.timerId
+    console.log '!!! timerId !!!!'
+
     return
 
   $('.start_button').click ->
@@ -81,11 +97,8 @@ $(document).ready ->
     window.whore_builder = whore_builder
     whore_animation()
     return
+
   $('body').keypress (e) ->
-    console.log '=-=-=-=-=>>>'
-    console.log '=-=-=-=-=>>>'
-    console.log '=-=-=-=-=>>>'
-    console.log '=-=-=-=-=>>>'
     if e.keyCode == 97
       console.log 'Left button'
       $('.catcher').removeClass('right-direction').addClass 'left-direction'

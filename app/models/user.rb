@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
 
+  has_many  :scores,         dependent: :destroy
+  has_many  :identities,     dependent: :destroy
+
+  accepts_nested_attributes_for :identities
+
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
 
@@ -22,30 +27,30 @@ class User < ActiveRecord::Base
     puts auth
     puts '==========>'
 
-
     puts '=========>'
-    puts Identity.find_for_oauth(auth)
-    user = Identity.find_for_oauth(auth).user
-    puts user
+    identity = Identity.find_by_uid(auth.uid.to_s)
     puts '=========>'
 
-    if user.present?
-      user
+    if identity.present?
+      identity.user
     else
-      puts '<<<<<<<=-=-=-=-==-=-=-=-=='
-      puts auth.info.inspect
-      puts auth.info.email
-      puts auth.info.first_name.inspect
-      puts auth.info.last_name.inspect
-      user = User.create!({ name: [auth.info.first_name, auth.info.last_name].join(' '), email: auth.info.email, password: Devise.friendly_token[0,20], confirmed_at: Time.now.utc})
+      # attributes = { name: [auth.info.first_name, auth.info.last_name].join(' '), email: auth.info.email, password: Devise.friendly_token[0,20], confirmed_at: Time.now.utc, identities_attributes: { provider: auth.provider, uid: auth.uid.to_s } }
+      attributes = { name: [auth.info.first_name, auth.info.last_name].join(' '), email: auth.info.email, password: Devise.friendly_token[0,20], confirmed_at: Time.now.utc }
+      puts "attributes"
+      puts attributes
+      puts "attributes"
 
+      user = User.create!(attributes)
+
+      identity = Identity.create({ provider: auth.provider, uid: auth.uid.to_s, user: user })
+
+      puts '======-====-========'
+      puts identity
       puts user.inspect
+
       return user
-      #
       # Identity.create({})
     end
-
-    self.check_user_exists
 
 
     # if user = User.where(:url => access_token.info.urls.Vkontakte).first
