@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="shortcut icon" href="/images/faviconnew.ico?3" />
+
+<link rel="apple-touch-icon" href="/images/safari_60.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/safari_76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/safari_120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/safari_152.png">
+
+<meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+<meta name="description" content="" />
+
+
+<title>Редактирование приложения - Catcher</title>
+
+<noscript><meta http-equiv="refresh" content="0; URL=/badbrowser.php"></noscript>
+
+<script type="text/javascript">
+var vk = {
+  ads_rotate_interval: 120000,
+  al: parseInt('3') || 4,
+  id: 82412500,
+  intnat: '' ? true : false,
+  host: 'vk.com',
+  lang: 0,
+  rtl: parseInt('') || 0,
+  version: 19181,
+  stDomains: 0,
+  zero: false,
+  contlen: 27614,
+  loginscheme: 'https',
+  ip_h: '907395e316282f405e',
+  vc_h: 'b10b694cf8a73e4055a1725bd3331236',
+  navPrefix: '/',
+  dt: parseInt('0') || 0,
+  fs: parseInt('11') || 11,
+  ts: 1458289081,
+  tz: 10800,
+  pd: 0,
+  pads: 1,
+  vcost: 7,
+  time: [2016, 3, 18, 11, 18, 1],
+  sampleUser: -1, spentLastSendTS: new Date().getTime()
+};
+
+window.locDomain = vk.host.match(/[a-zA-Z]+\.[a-zA-Z]+\.?$/)[0];
+var _ua = navigator.userAgent.toLowerCase();
+if (/opera/i.test(_ua) || !/msie 6/i.test(_ua) || document.domain != locDomain) document.domain = locDomain;
+var ___htest = (location.toString().match(/#(.*)/) || {})[1] || '', ___to;
+if (vk.al != 1 && ___htest.length && ___htest.substr(0, 1) == vk.navPrefix) {
+  if (vk.al != 3 || vk.navPrefix != '!') {
+    ___to = ___htest.replace(/^(\/|!)/, '');
+    if (___to.match(/^([^\?]*\.php|login|mobile)([^a-z0-9\.]|$)/)) ___to = '';
+    location.replace(location.protocol + '//' + location.host + '/' + ___to);
+  }
+}
+
+var StaticFiles = {
+  'common.js' : {v: 1130},
+  'common.css': {v: 512},
+  'ie6.css'   : {v: 26},
+  'ie7.css'   : {v: 18}
+  ,'lang0_0.js':{v:6699},'apps.css':{v:223},'apps.js':{v:287},'ui_controls.js':{v:189},'ui_controls.css':{v:66},'privacy.js':{v:100},'privacy.css':{v:52},'tags_dd.js':{v:18},'tags_dd.css':{v:17},'apps_edit.js':{v:116},'apps_edit.css':{v:121},'dev.js':{v:82},'dev.css':{v:101},'notifier.js':{v:383},'notifier.css':{v:151}
+}
+var abp;
+</script>
+
+<link rel="stylesheet" type="text/css" href="/css/al/common.css?512" />
+<!--[if lte IE 6]><style type="text/css" media="screen">/* <![CDATA[ */ @import url(/css/al/ie6.css?26); /* ]]> */</style><![endif]-->
+<!--[if IE 7]><style type="text/css" media="screen">/* <![CDATA[ */ @import url(/css/al/ie7.css?18); /* ]]> */</style><![endif]-->
+<link type="text/css" rel="stylesheet" href="/css/al/apps.css?223"></link><link type="text/css" rel="stylesheet" href="/css/ui_controls.css?66"></link><link type="text/css" rel="stylesheet" href="/css/al/privacy.css?52"></link><link type="text/css" rel="stylesheet" href="/css/al/tags_dd.css?17"></link><link type="text/css" rel="stylesheet" href="/css/al/apps_edit.css?121"></link><link type="text/css" rel="stylesheet" href="/css/al/dev.css?101"></link><link type="text/css" rel="stylesheet" href="/css/al/notifier.css?151"></link><script type="text/javascript" src="/js/loader_nav19181_0.js"></script><script type="text/javascript" src="/js/al/common.js?1130_191"></script><script type="text/javascript" src="/js/lang0_0.js?6699"></script><script type="text/javascript" src="/js/lib/px.js?ch=1"></script><script type="text/javascript" src="/js/lib/px.js?ch=2"></script><script type="text/javascript" src="/js/al/apps.js?287"></script><script type="text/javascript" src="/js/lib/ui_controls.js?189"></script><script type="text/javascript" src="/js/al/privacy.js?100"></script><script type="text/javascript" src="/js/al/tags_dd.js?18"></script><script type="text/javascript" src="/js/al/apps_edit.js?116"></script><script type="text/javascript" src="/js/al/dev.js?82"></script><script type="text/javascript" src="/js/al/notifier.js?383"></script>
+
+</head>
+
+<body onresize="onBodyResize()" class="is_rtl font_default pads dev no_wrap_cont">
+  <div id="system_msg" class="fixed"></div>
+  <div id="utils"></div>
+
+  <div id="layer_bg" class="fixed"></div><div id="layer_wrap" class="scroll_fix_wrap fixed"><div id="layer"></div></div>
+  <div id="box_layer_bg" class="fixed"></div><div id="box_layer_wrap" class="scroll_fix_wrap fixed"><div id="box_layer"><div id="box_loader"><div class="loader"></div><div class="back"></div></div></div></div>
+
+  <div id="stl_left"></div><div id="stl_side"></div>
+
+  <script type="text/javascript">domStarted();</script>
+
+  <div class="scroll_fix_wrap" id="page_wrap">
+<div><div class="scroll_fix">
+  <div id="page_layout" style="width: 990px;">
+    <div id="page_header" class="p_head p_head_l0">
+      <div class="back"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="content">
+        <div id="top_nav" class="head_nav">
+  <table cellspacing="0" cellpadding="0" id="top_links">
+    <tr>
+      <td class="top_home_link_td">
+        <div id="top_logo_down"></div>
+        <a class="top_home_link" href="/feed" onmousedown="addClass('top_logo_down','tld_d');" onclick="return nav.go(this, event);"></a>
+      </td>
+      <td class="top_back_link_td">
+        <a class="top_nav_link fl_l" href="" id="top_back_link" onclick="if (nav.go(this, event, {back: true}) === false) { showBackLink(); return false; }" onmousedown="tnActive(this)"></a>
+      </td>
+      <td style=""><nobr>
+        <a class="top_nav_link" id="head_people" href="/search?c[section]=people" onclick="return nav.go(this, event, {search: true, noframe: true});" onmousedown="tnActive(this)">люди</a>
+      </nobr></td>
+      <td style=""><nobr>
+        <a class="top_nav_link" id="head_communities" href="/search?c[section]=communities" onclick="return nav.go(this, event, {search: true, noframe: true});" onmousedown="tnActive(this)">сообщества</a>
+      </nobr></td>
+      <td style=""><nobr>
+        <a class="top_nav_link" id="head_games" href="/apps" onclick="return nav.go(this, event, {noback: true});" onmousedown="tnActive(this)">игры</a>
+      </nobr></td>
+      <td style=""><nobr>
+        <a class="top_nav_link" id="head_music" href="/audios82412500?act=popular" onclick="return Pads.show('mus', event);" onmousedown="tnActive(this)">
+          <span id="head_music_text">музыка</span>
+          <div id="head_play_btn" onmouseover="addClass(this, 'over');" onmouseout="removeClass(this, 'over'); removeClass(this, 'down')" onmousedown="addClass(this, 'down'); addClass(ge('head_music'), 'head_play_down');" onmouseup="removeClass(this, 'down')" onclick="headPlayPause(event); return Pads.show('mus', event);"></div>
+        </a>
+      </nobr></td>
+      <td id="support_link_td" style=""><nobr>
+        <a class="top_nav_link" id="top_support_link" href="/support?act=home" onclick="return nav.go(this, event, {noback: true});" onmousedown="tnActive(this)">помощь</a>
+      </nobr></td>
+      <td id="logout_link_td"><nobr>
+        <a class="top_nav_link" id="logout_link" href="https://login.vk.com/?act=logout&hash=eaa46fdf8ef26bcfdd&_origin=https://vk.com" onclick="if (checkEvent(event) === false) { window.Notifier && Notifier.lcSend('logged_off'); location.href = this.href; return cancelEvent(event); }" onmousedown="tnActive(this)">выйти</a>
+      </nobr></td>
+    </tr>
+  </table>
+  <div id="ts_wrap" class="clear_fix">
+    <div id="ts_input_wrap" class="ts_input_wrap fl_r" onmouseover="TopSearch.highlightInput(true); TopSearch.initFriendsList();" onmouseout="TopSearch.highlightInput(false)">
+      <div class="ts" onmousedown="event.cancelBubble = true;">
+        <div class="ts_input_wrap2"><div>
+          <input type="text" onmousedown="event.cancelBubble = true;" ontouchstart="event.cancelBubble = true;" class="text" id="ts_input" autocomplete="off" placeholder="Поиск" />
+        </div></div>
+      </div>
+    </div>
+  </div>
+  <span style="display: none" id="top_new_msg"></span>
+</div>
+<div id="ts_cont_wrap" ontouchstart="event.cancelBubble = true;" onmousedown="event.cancelBubble = true;"></div>
+      </div>
+    </div>
+
+    <div id="side_bar" class="fl_l" style="display: none">
+      <ol>
+  <li>
+  <table id="myprofile_table" cellspacing="0" cellpadding="0"><tr>
+    <td id="myprofile_wrap">
+      <a href="/grappman" onclick="return nav.go(this, event, {noback: true})" id="myprofile" class="left_row"><span class="left_label inl_bl">Моя Страница</span></a>
+    </td>
+    <td id="myprofile_edit_wrap">
+      <a href="/edit" id="myprofile_edit" class="left_row"><span class="left_label inl_bl">ред.</span></a>
+    </td>
+  </tr></table>
+</li><li id="l_fr"><a href="/friends" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad" onmouseover="Pads.preload('fr')" onmousedown="return Pads.show('fr', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Мои Друзья</span></span></a></li><li id="l_ph"><a href="/albums82412500" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad" onmouseover="Pads.preload('ph')" onmousedown="return Pads.show('ph', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Мои Фотографии</span></span></a></li><li id="l_vid"><a href="/video" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad" onmouseover="Pads.preload('vid')" onmousedown="return Pads.show('vid', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Мои Видеозаписи</span></span></a></li><li><a href="/audios82412500" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Мои Аудиозаписи</span></span></a></li><li id="l_msg"><a href="/im" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad left_count_persist" onmouseover="Pads.preload('msg')" onmousedown="return Pads.show('msg', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Мои Сообщения</span></span></a></li><li style="display: none" id="l_nts"><a href="/notes" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Мои Заметки</span></span></a></li><li id="l_gr"><a href="/groups" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad" onmouseover="Pads.preload('gr')" onmousedown="return Pads.show('gr', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Мои Группы</span></span></a></li><li style="display: none" id="l_ev"><a href="/events" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Мои Встречи</span></span></a></li><li id="l_nwsf"><a href="/feed" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Мои Новости</span></span></a></li><li id="l_nws"><a href="/feed?section=notifications" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad left_count_persist" onmouseover="Pads.preload('nws')" onmousedown="return Pads.show('nws', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Мои Ответы</span></span></a></li><li><a href="/fave" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Мои Закладки</span></span></a></li><li id="l_set"><a href="/settings" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Мои Настройки</span></span></a></li><div class="more_div"></div><li id="l_ap"><a href="/apps" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_pad left_count_persist" onmouseover="Pads.preload('ap')" onmousedown="return Pads.show('ap', event)" onclick="return (checkEvent(event) || browser.msie6) ? true : cancelEvent(event)"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span></span><span class="left_label inl_bl">Приложения</span></span></a></li><li><a href="/docs" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Документы</span></span></a></li><li style="display: none" id="l_ads"><a href="/ads?act=office&last=1" onclick="return nav.go(this, event, {noback: true, params: {_ref: 'left_nav'}});" class="left_row"><span class="left_fixer"><span class="left_count_wrap  left_void fl_r"><span class="inl_bl left_plus">+</span></span><span class="left_label inl_bl">Реклама</span></span></a></li>
+</ol>
+<div id="left_blocks"></div><div id="ads_left"></div>
+    </div>
+
+    <div id="page_body" class="simple" style="width: 960px;">
+      <div id="header_wrap2">
+        <div id="header_wrap1">
+          <div id="header" style="display: none">
+            <h1 id="title"></h1>
+          </div>
+        </div>
+      </div>
+      <div id="wrap_between"></div>
+      <div id="wrap3"><div id="dev_page_wrap3">
+  <div id="dev_top_nav_wrap">
+    <div id="dev_top_nav" class="clear_fix" style="width: 960px">
+      <div class="dev_home_wrap fl_l">
+        <a class="dev_home_link fl_l" href="/dev">Developers</a>
+      </div>
+      <a id="dev_top_docs" class="dev_top_link  fl_l" href="/dev/main">Документация</a>
+      <a id="dev_top_apps" class="dev_top_link sel fl_l" href="/apps?act=manage">Мои приложения</a>
+      <a id="dev_top_help" class="dev_top_link  fl_l" href="/dev/help">Поддержка</a>
+      <a id="dev_top_terms" class="dev_top_link  fl_l" href="/dev/terms">Правила</a>
+      <div class="dev_top_profile fl_r">
+  <a class="dev_top_profile_link" href="/grappman"><img src="https://pp.vk.me/c625327/v625327500/34709/x-AYZHaL0G0.jpg" /></a>
+</div>
+      <div class="dev_top_input_wrap fl_r">
+        <input class="dev_top_input text" type="text" id="dev_top_input" autocomplete="off" placeholder="Поиск" onkeydown="return Dev.onSearchChange(this, event);" onblur="Dev.onSearchBlur()" onfocus="return Dev.onSearchChange(this, event);" />
+        <div id="dev_search_suggest">
+          <div id="dev_search_suggest_list">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fl_l dev_left_nav_wrap">
+  <div id="dev_left_nav" class="dev_nav apps_edit">
+    <div class="apps_edit_nav_header clear_fix" >
+  <div class="apps_edit_nav_img_wrap fl_l">
+    <img class="apps_edit_nav_img" src="/images/dquestion_d.png" />
+  </div>
+  <div class="apps_edit_nav_label fl_l">
+    Catcher
+  </div>
+</div><a id="apps_nav_info" class="nav " href="/editapp?section=info&id=5359713" style="" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('info', event);">Информация</a><a id="apps_nav_translations" class="nav " href="/editapp?section=translations&id=5359713" style="display: none;" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('translations', event);">Локализация</a><a id="apps_nav_options" class="nav nav_selected" href="/editapp?section=options&id=5359713" style="" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('options', event);">Настройки</a><a id="apps_nav_functions" class="nav " href="/editapp?section=functions&id=5359713" style="" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('functions', event);">Хранимые процедуры</a><a id="apps_nav_stats" class="nav " href="/stats?aid=5359713" style="" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('stats', event);">Статистика</a><a id="apps_nav_payments" class="nav " href="/editapp?section=payments&id=5359713" style="display: none;" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('payments', event);">Платежи</a><a id="apps_nav_admins" class="nav " href="/editapp?section=admins&id=5359713" style="" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('admins', event);">Руководство</a><a id="apps_nav_checks" class="nav " href="/editapp?section=checks&id=5359713" style="display: none;" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('checks', event);">Статус</a><a id="apps_nav_activities" class="nav " href="/editapp?section=activity&id=5359713" style="display: none" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('activities', event);">Миссии</a><a id="apps_nav_ads" class="nav " href="/editapp?section=ads&id=5359713" style="display: none;" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('ads', event);">Реклама</a><a id="apps_nav_support" class="nav " href="/support?act=new_app&app_id=5359713" style="" onclick="return checkEvent(event);" onmousedown="return AppsEdit.switchTab('support', event);">Помощь</a>
+    <div id="dev_left_nav_mark"></div>
+  </div>
+  
+</div>
+  <div id="dev_page_wrap2" class="fl_r">
+    <div id="dev_page_wrap1">
+      <div id="dev_page_wrap">
+        <div id="app_edit">
+
+<div class="app_edit_main">
+  <div id="app_edit_wrap">
+    <div id="app_edit_cont" class="dev_page_block">
+<div class="app_edit_block_header clear_fix">
+  <div class="label fl_l">Настройки</div>
+</div>
+<div class="apps_edit_info_wrap">
+<div id="app_edit_error_wrap"><div id="app_edit_error"></div></div>
+<div id="apps_options_saved" class="apps_edit_success"></div>
+
+
+<table class="apps_edit_table">
+  <tr><td class="label ta_r">ID приложения:</td><td class="apps_edit_t">
+    <b>5359713</b>
+    <input type="hidden" id="app_id" value="5359713">
+    <input type="hidden" id="app_hash" value="bdb615d35d253b82bb">
+  </td></tr>
+
+  <tr><td class="label ta_r">Защищенный ключ:</td><td class="apps_edit">
+  <input type="text" class="text apps_edit_input" id="app_secret2" value="NSbXAGbSpc38KcSypuWt">
+  </td></tr>
+</table>
+
+<div style="">
+<table class="apps_edit_table">
+<tr><td class="label ta_r">Состояние:</td><td><div class="box_dark apps_edit_dd"><input class="text" type="hidden" id="app_enabled"/></div></td></tr>
+
+<tr><td class="label ta_r">Первый запрос к API:</td><td><textarea class="text" id="app_first_request"></textarea></td></tr>
+
+<tr><td class="label ta_r">Установка приложения:</td><td class="apps_edit_t"><a id="privacy_edit_install" onclick="Privacy.show(this, event, 'install')">Не требуется</a></td></tr>
+</table>
+
+<table id="apps_edit_install_require" class="apps_edit_table" style="display: none;">
+<tr><td class="label ta_r">Права доступа:</td><td class="apps_edit_t"><a id="privacy_edit_require" onclick="Privacy.show(this, event, 'require')">Не запрашивать доступ</a><span></span></td></tr>
+</table>
+
+<table class="apps_edit_table" style="">
+<tr><td class="label ta_r">Open API:</td><td class="apps_edit_t"><a id="privacy_edit_openapi" onclick="Privacy.show(this, event, 'openapi')">Включён</a></td></tr>
+</table>
+</div>
+
+<table class="apps_edit_table" style="display: none;">
+<tr><td class="label ta_r">Push-уведомления:</td><td class="apps_edit_t">
+<a id="privacy_edit_push" onclick="Privacy.show(this, event, 'push')"></a>
+</td></tr>
+</table>
+
+<div id="apps_edit_push_cert" style="display: none;">
+  <table class="apps_edit_table">
+    <tr><td class="label ta_r">Сертификат:</td><td class="apps_edit_t" id="apps_cert_label">
+      
+    </td></tr>
+    <tr style=""><td class="label ta_r">Sandbox сертификат:</td><td class="apps_edit_t" id="apps_dev_cert_label">
+      
+    </td></tr>
+  </table>
+</div>
+
+<div id="apps_edit_push_mpns" style="display: none;">
+  <table class="apps_edit_table">
+    <tr><td class="label ta_r">Сертификат (не обязательно):</td><td class="apps_edit_t" id="apps_cert_label">
+      
+    </td></tr>
+  </table>
+</div>
+
+<div id="apps_edit_push_login" style="display: none;">
+  <table class="apps_edit_table">
+    <tr><td class="label ta_r">Логин:</td><td class="apps_edit_desc">
+      <input id="apps_push_login" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+    <tr><td class="label ta_r">Пароль:</td><td class="apps_edit_desc">
+      <input id="apps_push_pass" type="password" class="text apps_edit_input" value=""/>
+    </td></tr>
+  </table>
+</div>
+
+<div id="apps_edit_push_sid_secret" style="display: none;">
+  <table class="apps_edit_table">
+    <tr><td class="label ta_r">SID:</td><td class="apps_edit_desc">
+      <input id="apps_push_sid" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+    <tr><td class="label ta_r">Client Secret:</td><td class="apps_edit_desc">
+      <input id="apps_push_secret" type="password" class="text apps_edit_input" value=""/>
+    </td></tr>
+  </table>
+</div>
+
+<div id="apps_edit_push_api_key" style="display: none;">
+  <table class="apps_edit_table">
+    <tr><td class="label ta_r">Project Id:</td><td class="apps_edit_desc">
+      <input id="apps_push_sender_id" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+    <tr><td class="label ta_r">Simple API Key:</td><td class="apps_edit_desc">
+      <input id="apps_push_api_key" type="password" class="text apps_edit_input" value="" />
+    </td></tr>
+  </table>
+</div>
+
+
+<div id="apps_edit_openapi" style="">
+  <div class="apps_edit_header">Open API:</div>
+
+  <table class="apps_edit_table">
+    <tr><td class="label ta_r">Адрес сайта:</td><td class="apps_edit_desc">
+        <input id="app_site_url" type="text" class="text apps_edit_input" value="https://whore-catcher.herokuapp.com/" placeholder="http://yoursite.com" />
+    </td></tr>
+    <tr style=""><td class="label ta_r">Тематика сайта:</td><td class="apps_edit_desc">
+        <input id="app_site_subject" type="hidden" />
+    </td></tr>
+    <tr><td class="label ta_r">Базовый домен:</td><td id="apps_edit_domain_cont" class="apps_edit_desc" onmouseover="AppsEdit.showHint(this, false, [-296, 0, -67]);" onmouseout="AppsEdit.hideHint(this);">
+        <input id="app_base_domain" type="text" class="text apps_edit_input" value="whore-catcher.herokuapp.com" placeholder="yoursite.com" />
+    </td></tr>
+        <tr class="apps_edit_redirect_uri_row">
+        <td class="label ta_r">Доверенный redirect URI:
+            <br />
+            <div class="apps_edit_leftacts"><a onclick="cur.addRedirectUri(this);">Добавить ещё</a></div>
+          </td>
+        <td>
+            <input class="text apps_edit_input" id="app_redirect_uri_0" value="https://whore-catcher.herokuapp.com/" placeholder="http://yoursite.com/verify" onmouseover="AppsEdit.showHint(this, false, [-296, 0, -67]);" onmouseout="AppsEdit.hideHint(this);"/>
+        </td>
+    </tr>
+  </table>
+</div>
+
+
+
+<div id="apps_edit_container_opts" style="display: none;">
+  <div class="apps_edit_header">Настройки контейнера</div>
+  <table id="app_type" class="apps_edit_table app_type">
+  <tr><td class="label ta_r">Тип приложения:</td><td class="apps_edit_r">
+  <div id="app_type_1" class="radiobtn" onclick="cur.checkAppType(1);"><div></div>IFrame</div>
+  <div class="apps_edit_desc_abs">Позволяет запускать приложение через <a href="/dev/IFrame_apps">IFrame</a> с указанного Вами адреса.</div>
+  </td></tr>
+  <tr><td class="label ta_r"></td><td class="apps_edit_r">
+  <div id="app_type_0" class="radiobtn" onclick="cur.checkAppType(0);"><div></div>Flash</div>
+  <div class="apps_edit_desc_abs">Позволяет запускать SWF-файлы со страницы приложения.</div>
+  </td></tr>
+  </table>
+
+  <table id="apps_edit_iframe_options" class="apps_edit_table" style="display:none">
+  <tr><td class="label ta_r">Адрес IFrame:</td><td><input class="text apps_edit_input" type="text" id="app_iframe_url" value="" onkeyup="AppsEdit.updateSecureUrl()" /></td></tr>
+  <tr id="apps_edit_iframe_secure"><td class="label ta_r">HTTPS-адрес IFrame:</td><td><input class="text apps_edit_input" type="text" id="app_iframe_secure_url" value="" onkeyup="AppsEdit.onChangeSecureUrl()" /></td></tr>
+  <tr><td class="label ta_r">Размер IFrame:</td><td>
+    <input class="text text_small apps_edit_input" type="text" id="app_iframe_width" onchange="AppsEdit.checkSize(this, 1000)" onkeyup="AppsEdit.checkSize(this, 1000)" onpaste="AppsEdit.checkSize(this, 1000)" value="607" />
+    <span class="apps_edit_iframe_res">x</span>
+    <input class="text text_small apps_edit_input" type="text" id="app_iframe_height" onchange="AppsEdit.checkSize(this, 4050)" onkeyup="AppsEdit.checkSize(this, 4050)" onpaste="AppsEdit.checkSize(this, 4050)" value="500" /></td></tr>
+  </table>
+
+  <table id="apps_edit_flash_options" class="apps_edit_table" style="display: none;">
+  <tr style="display: none;"><td class="label ta_r">Flash-контейнер:</td><td><div id="app_wrapper_hint" class="apps_edit_hint box_dark apps_edit_dd" onmouseover="AppsEdit.showHint(this);" onmouseout="AppsEdit.hideHint(this);"><input type="hidden" id="app_wrapper" /></div></td></tr>
+  <tr><td class="label ta_r">Flash-параметр wmode:</td><td><div id="apps_wmode_hint" class="apps_edit_hint box_dark apps_edit_dd" onmouseover="AppsEdit.showHint(this);" onmouseout="AppsEdit.hideHint(this);"><input type="hidden" id="app_wmode" /></div></td></tr>
+  </table>
+</div>
+
+<div id="apps_edit_sdk" style="display: none;">
+  <div class="apps_edit_header">Настройки SDK</div>
+  <table class="apps_edit_table" id="apps_edit_sdk_list">
+    <tr><td class="label ta_r">App Bundle ID для iOS:</td><td class="apps_edit_desc">
+    <input id="app_sdk_ios_bundle" type="text" class="text apps_edit_input" value="" />
+    <tr><td class="label ta_r">App Id для iOS:</td><td class="apps_edit_desc">
+    <input id="app_sdk_ios_id" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+    <tr><td class="label ta_r">Название пакета<br>для Android:</td><td class="apps_edit_desc">
+    <input id="app_sdk_andr_pack" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+    <tr><td class="label ta_r">Main activity для Android:</td><td class="apps_edit_desc">
+    <input id="app_sdk_andr_mainact" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+    <tr class="apps_edit_fp_row"><td class="label ta_r">Отпечаток сертификата<br>для Android:<br /><div class="apps_edit_leftacts"><a onclick="cur.addFingerprint(this);">Добавить ещё</a></div></td><td><textarea class="text" id="app_sdk_andr_fingerprint_0"></textarea></td></tr>
+    <tr><td class="label ta_r">Windows App ID:</td><td class="apps_edit_desc">
+    <input id="app_sdk_windows_id" type="text" class="text apps_edit_input" value="" />
+    </td></tr>
+  </table>
+</div>
+
+<table id="apps_edit_save" class="apps_edit_table">
+<tr><td class="label ta_r"></td><td class="apps_edit_info_save">
+<button class="flat_button" id="app_save_btn" onclick="AppsEdit.saveOptions();">Сохранить изменения</button>
+</td></tr>
+</table>
+</div>
+</div>
+
+<div id="apps_edit_flash_other_options" class="dev_page_block" style="display: none;">
+  <div class="app_edit_block_header clear_fix">
+    <div class="label fl_l">Обновление приложения</div>
+  </div>
+  <div class="apps_edit_info_wrap">
+    <div class="apps_edit_header no_padd">Загрузка SWF-приложения</div>
+    <table class="apps_edit_table">
+    <tr><td class="label ta_r"></td><td><button class="flat_button secondary" onclick="AppsEdit.updateSWF();">Загрузить приложение</button></div></td></tr>
+    </table>
+
+    <div class="apps_edit_header">Дополнительные SWF-файлы</div>
+    <table class="apps_edit_table">
+    <tr><td class="label ta_r"></td><td><button class="flat_button secondary" onclick="AppsEdit.addSWF();">Добавить SWF-файл</button></td></trРґ>
+    </table>
+    <div class="apps_edit_swf_rows" id="apps_edit_swf_rows">
+    
+    </div>
+  </div>
+</div>
+
+<div id="apps_edit_other_wrap" class="apps_edit_other dev_page_block" style="">
+  <div id="apps_edit_other_delete" style="">
+    <div class="app_edit_block_header clear_fix">
+      <div class="label fl_l">Удаление приложения</div>
+    </div>
+    <div class="apps_edit_info_wrap">
+      <div>Если Вы удалите это приложение, Вы уже не сможете его восстановить.</div>
+      <button class="apps_edit_delete_btn flat_button" onclick="AppsEdit.deleteApp();">Удалить приложение</button>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</div>
+      </div>
+    </div>
+    <div class="dev_footer_wrap" id="dev_footer_wrap">
+  <div class="dev_footer">
+    <div class="dev_footer_copy fl_l">ВКонтакте &copy; 2016</div>
+    <div class="dev_footer_lang fl_r">Язык:<a class="bnav_lang" onclick="showBox('lang.php', {act: 'lang_dialog'}, {params: {dark: true, bodyStyle: 'padding: 0px'}, noreload: true})">Русский</a></div>
+    <div class="dev_footer_links">
+      <a class="bnav_a" href="/about">о сайте</a>
+      <a class="bnav_a" href="/support?act=home" onclick="return nav.go(this, event);" style="">помощь</a>
+      <a class="bnav_a" href="/terms">правила</a>
+      <a class="bnav_a" href="/ads">реклама</a>
+      
+      <a class="bnav_a" href="/dev">разработчикам</a>
+      <a class="bnav_a" href="/jobs" style="">вакансии</a>
+    </div>
+  </div>
+  <div class="dev_footer_bench clear">
+    
+  </div>
+</div>
+  </div>
+</div></div>
+    </div>
+
+    <div id="footer_wrap" class="fl_r" style="width: 755px;">
+      <div id="bottom_nav">
+  <a class="bnav_a" href="/about">о сайте</a>
+  <a class="bnav_a" href="/support?act=home" onclick="return nav.go(this, event);" style="">помощь</a>
+  <a class="bnav_a" href="/terms">правила</a>
+  <a class="bnav_a" href="/ads">реклама</a>
+  
+  <a class="bnav_a" href="/dev">разработчикам</a>
+  <a class="bnav_a" href="/jobs" style="">вакансии</a>
+</div>
+<div id="footer" class="clear">
+  <div class="copy_lang">ВКонтакте &copy; 2016 <a class="bnav_lang" onclick="showBox('lang.php', {act: 'lang_dialog'}, {params: {dark: true, bodyStyle: 'padding: 0px'}, noreload: true})">Русский</a></div>
+  
+  <div>
+    <small><a href="/durov" onclick="return nav.go(this, event)">Павел Дуров</a></small>
+    
+  </div>
+</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div></div><noscript><div style="position:absolute;left:-10000px;">
+<img src="//top-fwz1.mail.ru/counter?id=2579437;pid=82412500;js=na" style="border:0;" height="1" width="1" />
+</div></noscript></div>
+  <div class="progress" id="global_prg"></div>
+
+  <script type="text/javascript">
+    if (parent && parent != window && (browser.msie || browser.opera || browser.mozilla || browser.chrome || browser.safari || browser.iphone)) {
+      document.getElementsByTagName('body')[0].innerHTML = '';
+    } else {
+      domReady();
+      updateMoney(0);
+gSearch.init();
+if (window.qArr && qArr[5]) qArr[5] = [5, "по товарам", "", "goods", 0x00000100];
+if (browser.iphone || browser.ipad || browser.ipod) {
+  setStyle(bodyNode, {webkitTextSizeAdjust: 'none'});
+}
+if (0) {
+  hide('support_link_td');
+}
+var ts_input = ge('ts_input'), oldFF = browser.mozilla && parseInt(browser.version) < 8;
+if (browser.mozilla && !oldFF) {
+  setStyle(ts_input, {padding: (vk.rtl ? '3px 20px 6px 40px' : '3px 41px 6px 20px')});
+}
+placeholderSetup(ts_input, {back: false, reload: true});
+if (browser.opera || browser.msie || browser.mozilla) {
+  setStyle(ts_input, {padding: (vk.rtl ? '4px 20px 5px 40px' : '4px 41px 5px 20px')});
+} else if (browser.chrome || browser.safari) {
+  setStyle(ts_input, {padding: (vk.rtl ? '4px 21px 5px 40px' : '4px 40px 5px 21px')});
+}
+
+TopSearch.init();
+if (browser.msie8 || browser.msie7) {
+  var st = {border: '1px solid #a6b6c6'};
+  if (hasClass(ge('ts_wrap'), 'vk')) {
+    if (vk.rtl) st.left = '1px';
+    else st.right = '0px';
+  } else {
+    if (vk.rtl) st.right = '146px';
+    else st.left = '146px';
+  }
+  setStyle(ge('ts_cont_wrap'), st);
+}
+window.tsHintsEnabled = 1;;function bin2hex(s) {
+  var i, l, o = '', n;
+  s += '';
+  for (i = 0, l = s.length; i < l; i++) {
+    n = s.charCodeAt(i)
+      .toString(16);
+    o += n.length < 2 ? '0' + n : n;
+  }
+  return o;
+}
+var UnicodeMap = {0: 0, 1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 6: 6, 7: 7, 8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 14, 15: 15, 16: 16, 17: 17, 18: 18, 19: 19, 20: 20, 21: 21, 22: 22, 23: 23, 24: 24, 25: 25, 26: 26, 27: 27, 28: 28, 29: 29, 30: 30, 31: 31, 32: 32, 33: 33, 34: 34, 35: 35, 36: 36, 37: 37, 38: 38, 39: 39, 40: 40, 41: 41, 42: 42, 43: 43, 44: 44, 45: 45, 46: 46, 47: 47, 48: 48, 49: 49, 50: 50, 51: 51, 52: 52, 53: 53, 54: 54, 55: 55, 56: 56, 57: 57, 58: 58, 59: 59, 60: 60, 61: 61, 62: 62, 63: 63, 64: 64, 65: 65, 66: 66, 67: 67, 68: 68, 69: 69, 70: 70, 71: 71, 72: 72, 73: 73, 74: 74, 75: 75, 76: 76, 77: 77, 78: 78, 79: 79, 80: 80, 81: 81, 82: 82, 83: 83, 84: 84, 85: 85, 86: 86, 87: 87, 88: 88, 89: 89, 90: 90, 91: 91, 92: 92, 93: 93, 94: 94, 95: 95, 96: 96, 97: 97, 98: 98, 99: 99, 100: 100, 101: 101, 102: 102, 103: 103, 104: 104, 105: 105, 106: 106, 107: 107, 108: 108, 109: 109, 110: 110, 111: 111, 112: 112, 113: 113, 114: 114, 115: 115, 116: 116, 117: 117, 118: 118, 119: 119, 120: 120, 121: 121, 122: 122, 123: 123, 124: 124, 125: 125, 126: 126, 127: 127, 1027: 129, 8225: 135, 1046: 198, 8222: 132, 1047: 199, 1168: 165, 1048: 200, 1113: 154, 1049: 201, 1045: 197, 1050: 202, 1028: 170, 160: 160, 1040: 192, 1051: 203, 164: 164, 166: 166, 167: 167, 169: 169, 171: 171, 172: 172, 173: 173, 174: 174, 1053: 205, 176: 176, 177: 177, 1114: 156, 181: 181, 182: 182, 183: 183, 8221: 148, 187: 187, 1029: 189, 1056: 208, 1057: 209, 1058: 210, 8364: 136, 1112: 188, 1115: 158, 1059: 211, 1060: 212, 1030: 178, 1061: 213, 1062: 214, 1063: 215, 1116: 157, 1064: 216, 1065: 217, 1031: 175, 1066: 218, 1067: 219, 1068: 220, 1069: 221, 1070: 222, 1032: 163, 8226: 149, 1071: 223, 1072: 224, 8482: 153, 1073: 225, 8240: 137, 1118: 162, 1074: 226, 1110: 179, 8230: 133, 1075: 227, 1033: 138, 1076: 228, 1077: 229, 8211: 150, 1078: 230, 1119: 159, 1079: 231, 1042: 194, 1080: 232, 1034: 140, 1025: 168, 1081: 233, 1082: 234, 8212: 151, 1083: 235, 1169: 180, 1084: 236, 1052: 204, 1085: 237, 1035: 142, 1086: 238, 1087: 239, 1088: 240, 1089: 241, 1090: 242, 1036: 141, 1041: 193, 1091: 243, 1092: 244, 8224: 134, 1093: 245, 8470: 185, 1094: 246, 1054: 206, 1095: 247, 1096: 248, 8249: 139, 1097: 249, 1098: 250, 1044: 196, 1099: 251, 1111: 191, 1055: 207, 1100: 252, 1038: 161, 8220: 147, 1101: 253, 8250: 155, 1102: 254, 8216: 145, 1103: 255, 1043: 195, 1105: 184, 1039: 143, 1026: 128, 1106: 144, 8218: 130, 1107: 131, 8217: 146, 1108: 186, 1109: 190};
+function UnicodeToWin1251(s) {
+  var L = [];
+  for (var i=0; i<s.length; i++) {
+    var ord = s.charCodeAt(i);
+    if (!(ord in UnicodeMap)) {
+      continue;
+    }
+    L.push(String.fromCharCode(UnicodeMap[ord]))
+  }
+  return L.join('');
+}
+;function f6623c84a912edaa691(string){
+  var result = [];
+  for (var i=0; i < string.length; ++i) {
+    result.push(String.fromCharCode(string.charCodeAt(i)+(-3)));
+  }
+  return result.join('');
+}
+;function f0bb0b6a9c5f3a9274d(e) {
+  var n, t, r = 15, i = 3;
+  if (!document.elementFromPoint)return-4;
+  var o = ge(f6623c84a912edaa691(e[0]));
+  if (!o)return-1;
+  var a = ge(f6623c84a912edaa691(e[1]), o);
+  if (!a)return-2;
+  var g = a.getBoundingClientRect();
+  if (!g)return-3;
+  for (var u = [], f = 0; i > f; ++f) {
+    var l = document.elementFromPoint(g.left + 3, g.top + g.height + r);
+    if (l === null) {
+      u.push(f + "z-6z");
+    } else {
+      var k=0;
+      for (; l && l.parentNode && !hasClass(l, f6623c84a912edaa691(e[2]));) {
+        if ((l.id == 'layer_wrap') || (l.id == 'wk_layer_wrap')) {
+          k=1;
+          break;
+        }
+        l = l.parentNode;
+      }
+      if (k) {
+        u.push(f + "z-8z");
+      } else {
+        if (l && l.getBoundingClientRect && (n = l.getBoundingClientRect(), t = geByClass1(f6623c84a912edaa691(e[3]), l))) {
+          var c = MD5(bin2hex(UnicodeToWin1251(t.innerHTML)));
+          u.push(f + "z" + c + "z" + l.getAttribute("data-cah"))
+        } else if (!l || !l.parentNode) {
+          u.push(f + "z-7z");
+        }
+      }
+    }
+    r += (n ? n.height : 210) + 15
+  }
+  return u.join("y")
+}
+setTimeout(function () {
+  stManager.add('md5.js', function () {
+    var e = ['vlghbedu','ohiwbeorfnv','dgvbdgber{','dgvbdgbwlwoh','DgvOljkw','jhwDgvVkrzhg'];
+    var c = f0bb0b6a9c5f3a9274d(e);
+    var s = '-5';
+    if (window && window[f6623c84a912edaa691(e[4])] && window[f6623c84a912edaa691(e[4])][f6623c84a912edaa691(e[5])]) {
+      s = window[f6623c84a912edaa691(e[4])][f6623c84a912edaa691(e[5])]();
+    }
+    var r = c+'r'+s;
+    if (c) {
+      ajax.post('wkview.php', {act: 'ca', r: r}, {onDone: function() { return true; }, onFail: function() { return true; }});
+    }
+  });
+}, 5000);;shortCurrency();;setTimeout(function() {  try {    var elem = ge(String.fromCharCode.apply(null,[118,107,98,95,97,100,118]));    if (elem) {      ajax.post('/al_profile.php', {act: 'pro', section: 1, hash: 'bbe47db4bea7efe930'}, {onDone: function() {}, onFail: function() { return true; }});    }  } catch (e) {}}, 5000);
+setTimeout(zNav.pbind({}, {queue:1}), 0);
+handlePageParams({"id":82412500,"pads":1,"leftblocks":"<div id=\"left_block3_0\" onmouseover=\"leftBlockOver('3_0')\" onmouseout=\"leftBlockOut('3_0')\">\n  <div id=\"left_hide3_0\" class=\"left_hide\" onmouseover=\"leftBlockOver(this)\" onmouseout=\"leftBlockOut(this)\" onclick=\"leftBlockHide('3_0', 'da845b6c8d685b04ce')\"><\/div>\n  <div class=\"left_box attention\">\n    <h4>Напоминание<\/h4>\n    <div>\n       <a href=\"\/friends?w=calendar\" onclick=\"return nav.change({w: 'calendar'})\">Завтра<\/a> день рождения <a href=\"\/id6430983\" onclick=\"return nav.go(this, event)\">Daniil Sinnikov<\/a>, <a href=\"\/stas_bogatir\" onclick=\"return nav.go(this, event)\">Станислава Богатырева<\/a>.\n    <\/div>\n  <\/div>\n<\/div>","leftads":"","ads_can_show":"1","no_ads":1,"loc":"editapp?id=5359713&section=options","noleftmenu":1,"plain":1,"wrap_page":1,"width":990,"width_dec":30,"width_dec_footer":235,"body_class":"is_rtl font_default pads dev no_wrap_cont","counters":"0,0,0,0,-1,0,-1,-1,0,-1,0,-1,-1","pvbig":1,"pvdark":1});addEvent(document, 'click', onDocumentClick);var appEnabled = 1;
+
+window.radioBtns['app_type'] = {
+  els: [ge('app_type_0'), ge('app_type_1')]
+}
+
+extend(cur, {"lang":{"apps_title_file_delete":"Удаление файла","apps_confirm_file_delete":"Вы уверены, что хотите удалить этот файл?"},"hint":{"app_wrapper_hint":"При использовании Flash контейнера SWF-приложение показывается пользователям не напрямую, а через SWF-обертку, которая в свою очередь выполняет функцию предзагрузчика и предоставляет методы для взаимодействия с внешним интерфейсом.<br><br>Однако мы не рекомендуем использовать Flash контейнер, чтобы избежать проблем с позиционированием элементов в приложении.","apps_wmode_hint":"При использовании режима <b>opaque<\/b> приложение отображается внутри страницы не перекрывая окна чата и уведомлений, однако в приложении могут наблюдаться проблемы с вводом кириллического текста.<br><br>При использовании режима <b>window<\/b> приложение отображается поверх всех элементов, перекрывая собой окна чата и уведомления.<br><br>Режим <b>direct<\/b> обеспечивает максимальную производительность видео и трёхмерной графики, но во многих браузерах приложение может перекрывать окна чата и уведомлений. Используйте его только в случае необходимости."},"maskByGroupNum":{"1":1,"2":2,"3":4,"4":8,"5":16,"6":131072,"7":32,"8":64,"9":128,"10":1024,"11":2048,"12":8192,"13":262144,"14":524288,"15":1048576},"iframeSecureChanged":false});
+
+cur.privacy = {"openapi_types":["Выключен","Включён"],"openapi_help":"Платформа <b>OpenAPI<\/b> обеспечивает систему авторизации пользователей и доступ к интерфейсу <b>ВКонтакте API<\/b> с Вашего сайта. <a href=\"\/dev\/openapi\">Подробнее »<\/a>","openapi":[1,1,[],[]],"install_types":["Не требуется","Требуется"],"install_help":"Установленное приложение может запрашивать дополнительные права доступа","install":[0,1,[],[]],"help":[0,1,[],[]],"help_types":["Выключена","Включена"],"help_help":"После включения страницы помощи над приложением появится ссылка <b>Помощь<\/b>, при переходе на которую пользователь увидит Ваш текст.","require_types":{"0":"Не запрашивать доступ","6":"Запрашивать доступ к"},"require_lists":{"301":"присылать уведомления","302":"доступ к друзьям","303":"доступ к фотографиям","304":"доступ к аудиозаписям","305":"доступ к видеозаписям","306":"доступ к документам","307":"доступ к предложениям","308":"доступ к вопросам","309":"доступ к вики-страницам","310":"обновление статуса","311":"доступ к заметкам","312":"доступ к стене","313":"доступ к группам","314":"доступ к ответам","315":"доступ к статистике"},"require":[0,[],[]]};
+
+function slideSection(obj, val, dt) {
+  var obj = ge(obj);
+  if (parseInt(val) && !isVisible(obj)) {
+    slideUp(obj, 0);
+    slideDown(obj, (dt != undefined) ? dt : 150);
+  }
+  if (!parseInt(val) && isVisible(obj)) {
+    slideUp(obj, (dt != undefined) ? dt : 150);
+  }
+}
+
+cur.onPrivacyChanged = function(key, dt) {
+  var val = Privacy.getValue(key);
+  switch (key) {
+    case 'openapi':
+      slideSection('apps_edit_openapi', val);
+      break;
+    case 'install':
+      slideSection('apps_edit_install_require', val);
+      break;
+    case 'push':
+      var showObjs = [];
+      var rawVal = val.split('_')
+      var rawVal = parseInt(rawVal[2]);
+      if (rawVal == 501) {
+        showObjs = ['apps_edit_push_cert'];
+      } else if (rawVal == 502) {
+        showObjs = ['apps_edit_push_login'];
+      } else if (rawVal == 505) {
+        showObjs = ['apps_edit_push_sid_secret'];
+      } else if (rawVal == 506) {
+        showObjs = ['apps_edit_push_api_key'];
+      } else if (rawVal == 503) {
+        showObjs = ['apps_edit_push_mpns'];
+      }
+      var objs = ['apps_edit_push_cert', 'apps_edit_push_login', 'apps_edit_push_sid_secret', 'apps_edit_push_api_key', 'apps_edit_push_mpns']
+      if (rawVal && ge('apps_edit_error_text')) {
+        slideUp('apps_edit_error_text', 200);
+      }
+      for (var i in objs) {
+        slideSection(ge(objs[i]), showObjs.indexOf(objs[i]) != -1 ? 1 : 0, dt);
+      }
+      break;
+  }
+}
+if (cur.privacy['push']) {
+  cur.onPrivacyChanged('push', 0);
+}
+
+cur.showSWFFileInfo = function(obj, ev) {
+  if (checkEvent(ev)) return;
+  var src = obj.href;
+  var src_secure = obj.getAttribute('secure_href');
+  showFastBox('Ссылка на файл', 'Вы можете использовать загруженный файл, обращаясь к нему по прямой ссылке. Используйте защищенный адрес, если пользователь открывает приложение через <b>HTTPS</b>.<br /><div class="apps_edit_blockquote"><b>Обычное соединение</b><br />'+src+'<br /><br /><b>Защищенное соединение</b><br />'+src_secure+'</div>');
+  return false;
+}
+
+cur.dropDowns = {};
+
+cur.checkAppType = function(type) {
+  radiobtn(ge('app_type_' + type), type, 'app_type')
+  if (type) {
+    show('apps_edit_iframe_options');
+    hide('apps_edit_flash_options');
+    hide('apps_edit_flash_other_options');
+  } else {
+    hide('apps_edit_iframe_options');
+    show('apps_edit_flash_options');
+    show('apps_edit_flash_other_options');
+  }
+  if (!isVisible('apps_edit_flash_other_options') && !isVisible('apps_edit_other_delete')) {
+    hide('apps_edit_other_wrap');
+  } else {
+    show('apps_edit_other_wrap');
+  }
+}
+if (isVisible('apps_edit_container_opts')) {
+  cur.checkAppType(0);
+}
+
+var wrapper = ge('app_wrapper');
+if (wrapper) {
+  cur.dropDowns['app_wrapper'] = new Dropdown(wrapper, [
+    [0, 'Без использования контейнера'],
+    [1, 'С использованием контейнера']
+  ], {
+    width: '278px',
+    selectedItems: '0',
+    multiselect: false,
+    big: 1
+  });
+}
+
+var wmode = ge('app_wmode');
+if (wmode) {
+  cur.dropDowns['app_wmode'] = new Dropdown(wmode, [
+    [0, '<b>opaque</b> — не перекрывает уведомления и окна'],
+    [1, '<b>window</b> — перекрывает уведомления и окна (не рекомендуется)'],
+    [2, '<b>direct</b> — использует аппаратное ускорение (рекомендуется только для 3D-графики)']
+  ], {
+    width: '278px',
+    selectedItems: '0',
+    multiselect: false,
+    big: 1
+  });
+}
+
+var appenableCont = ge('app_enabled');
+if (appEnabled != 0 && appenableCont) {
+  cur.dropDowns['app_enabled'] = new Dropdown(appenableCont, [
+    [-1, 'Приложение отключено'],
+    [1, 'Приложение включено и видно всем']
+  ], {
+    width: '278px',
+    selectedItems: '1',
+    multiselect: false,
+    big: 1
+  });
+} else {
+  var appState = ge('app_enabled');
+  if (appState) {
+    appState.disabled = true;
+    appState.type = 'text';
+    appState.value = 'Приложение заблокировано администрацией';
+  }
+}
+
+
+var groupsList = [[0,"Группа не выбрана"],[52963797,"База знаний"]];
+var appGroupCont = ge('app_group');
+if (groupsList && appGroupCont) {
+  cur.dropDowns['app_group'] = new Dropdown(appGroupCont, groupsList, {
+    width: '278px',
+    selectedItems: '0',
+    multiselect: false,
+    big: 1
+  });
+}
+
+var domainBase = ge('app_base_domain');
+cur.selectDD = new TagsDD(domainBase, {
+  width: 278,
+  search: 0,
+  paddings: 1,
+  placeholder: ''
+});
+hide(domainBase);
+cur.hint['apps_edit_domain_cont'] = 'Список доменных имён, на которых будут работать виджеты и OAuth авторизация для данного приложения.';
+
+var subjectsList = [[1,"Авто\/мото"],[2,"Активный отдых"],[19,"Безопасность"],[3,"Бизнес"],[42,"Дизайн и графика"],[29,"Дом и семья"],[4,"Домашние животные"],[5,"Здоровье"],[6,"Знакомство и общение"],[7,"Игры"],[8,"ИТ (компьютеры и софт)"],[9,"Кино"],[10,"Красота и мода"],[11,"Кулинария"],[12,"Культура и искусство"],[13,"Литература"],[14,"Мобильная связь и интернет"],[15,"Музыка"],[16,"Наука и техника"],[17,"Недвижимость"],[18,"Новости и СМИ"],[20,"Образование"],[21,"Обустройство и ремонт"],[41,"Общество, гуманитарные науки"],[22,"Политика"],[23,"Продукты питания"],[24,"Промышленность"],[25,"Путешествия"],[26,"Работа"],[27,"Развлечения"],[28,"Религия"],[30,"Спорт"],[31,"Страхование"],[32,"Телевидение"],[33,"Товары и услуги"],[34,"Увлечения и хобби"],[35,"Финансы"],[36,"Фото"],[37,"Эзотерика"],[38,"Электроника и бытовая техника"],[39,"Эротика"],[40,"Юмор"]];
+if (subjectsList) {
+  cur.dropDowns['app_site_subject'] = new Dropdown(ge('app_site_subject'), subjectsList, {
+    width: '278px',
+    multiselect: false,
+    autocomplete: true,
+    introText: 'Начните вводить тематику',
+    noResult: '',
+    placeholder: 'Выберите тематику',
+    big: 1
+  });
+  cur.siteSubject = 0;
+  if (cur.siteSubject  && cur.siteSubject != '0') {
+    cur.dropDowns['app_site_subject'].val(cur.siteSubject );
+  }
+}
+
+cur.addFingerprint = function(obj) {
+  var fp_row = gpeByClass('apps_edit_fp_row', obj);
+  var cont = ge('apps_edit_sdk_list');
+  var rows = geByClass('apps_edit_fp_row', cont);
+  fp_row.parentNode.insertBefore(ce('tr', {
+    className: 'apps_edit_fp_row',
+    innerHTML: '<td class="label ta_r">Отпечаток сертификата<br>для Android:<br /><div class="apps_edit_leftacts"><a onclick="cur.addFingerprint(this);">Добавить ещё</a><span class="divider">|</span><a onclick="cur.removeFingerprint(this);">Удалить</a></div></td><td><textarea class="text" id="app_sdk_andr_fingerprint_'+(rows.length)+'"></textarea></td>'
+  }), fp_row.nextSibling);
+  obj.parentNode.innerHTML = '<a onclick="cur.removeFingerprint(this);">Удалить</a>';
+};
+
+cur.removeFingerprint = function(obj) {
+  var cont = ge('apps_edit_sdk_list');
+  re(obj.parentNode.parentNode.parentNode);
+  var rows = geByClass('apps_edit_fp_row', cont)
+  var last = rows[rows.length - 1];
+  var controls = geByClass1('apps_edit_leftacts', last);
+  if (rows.length == 1) {
+    controls.innerHTML = '<a onclick="cur.addFingerprint(this);">Добавить ещё</a>';
+  } else {
+    controls.innerHTML = '<a onclick="cur.addFingerprint(this);">Добавить ещё</a><span class="divider">|</span><a onclick="cur.removeFingerprint(this);">Удалить</a>';
+  }
+};
+
+cur.addRedirectUri = function(obj) {
+  var redirect_uri_row = gpeByClass('apps_edit_redirect_uri_row', obj);
+  var cont = ge('apps_edit_openapi');
+  var rows = geByClass('apps_edit_redirect_uri_row', cont);
+  cur.hint["app_redirect_uri_"+(rows.length)] = 'Доверенный redirect URI, который будет передаваться при OAuth авторизации. Должен содержать протокол. Не может содержать URL параметры, фрагменты и относительные пути.';
+  redirect_uri_row.parentNode.insertBefore(ce('tr', {
+    className: 'apps_edit_redirect_uri_row',
+    innerHTML: '<td class="label ta_r">Доверенный redirect URI:<br /><div class="apps_edit_leftacts"><a onclick="cur.addRedirectUri(this);">Добавить ещё</a><span class="divider">|</span><a onclick="cur.removeRedirectUri(this);">Удалить</a></div></td><td><input class="text apps_edit_input" id="app_redirect_uri_'+(rows.length)+'" placeholder="http://yoursite.com/verify" onmouseover="AppsEdit.showHint(this, false, [-296, 0, -67]);" onmouseout="AppsEdit.hideHint(this);"/></td>'
+  }), redirect_uri_row.nextSibling);
+  obj.parentNode.innerHTML = '<a onclick="cur.removeRedirectUri(this);">Удалить</a>';
+};
+
+cur.removeRedirectUri = function(obj) {
+  var cont = ge('apps_edit_openapi');
+  re(obj.parentNode.parentNode.parentNode);
+  var rows = geByClass('apps_edit_redirect_uri_row', cont)
+  var last = rows[rows.length - 1];
+  var controls = geByClass1('apps_edit_leftacts', last);
+  if (rows.length == 1) {
+    controls.innerHTML = '<a onclick="cur.addRedirectUri(this);">Добавить ещё</a>';
+  } else {
+    controls.innerHTML = '<a onclick="cur.addRedirectUri(this);">Добавить ещё</a><span class="divider">|</span><a onclick="cur.removeRedirectUri(this);">Удалить</a>';
+  }
+};cur.mainCat = 0;
+var catList = [[[14,"Стратегии"],[18,"Ролевые"],[19,"3D-шутеры"],[21,"Гонки"],[10,"Аркады"],[16,"Экономические"],[12,"Симуляторы"],[15,"Головоломки"],[11,"Приключения"],[17,"Настольные"],[25,"Азартные"],[5,"Прочее"]],[[1007,"Новостные"],[1004,"Общение"],[1005,"Мультимедиа"],[1003,"Рисование"],[1006,"Образовательные"],[1008,"Магазины"],[1000,"Прочее"]]];
+
+window.radioBtns['app_category'] = {
+  els: [ge('app_category_0'), ge('app_category_1')]
+}
+
+cur.defVals = [5, 1000];
+cur.defVals[0] = 5;
+
+cur.checkAppCat = function(type) {
+  radiobtn(ge('app_category_' + type), type, 'app_category');
+  if (type != cur.mainCat) {
+    var dd = cur.dropDowns['app_subcategory'];
+    cur.defVals[cur.mainCat] = dd.val();
+
+    cur.mainCat = type;
+
+    dd.setData(catList[cur.mainCat]);
+    dd.val(cur.defVals[cur.mainCat])
+  }
+}
+cur.checkAppCat(cur.mainCat);
+
+var subcategoryCont = ge('app_subcategory');
+if (subcategoryCont) {
+  cur.dropDowns['app_subcategory'] = new Dropdown(subcategoryCont, catList[cur.mainCat], {
+    width: '278px',
+    selectedItems: '5',
+    multiselect: false,
+    big: 1
+  });
+};  cur.hint['app_redirect_uri_0'] = 'Доверенный redirect URI, который будет передаваться при OAuth авторизации. Должен содержать протокол. Не может содержать URL параметры, фрагменты и относительные пути.';  cur.aid = 5359713;
+
+AppsEdit.init();Dev.init([]);
+var sections = [];
+cur.sections = {"users":{"list":[["users.get",""],["users.search",""],["users.isAppUser",""],["users.getSubscriptions",""],["users.getFollowers",""],["users.report",""],["users.getNearby",""]],"name":"Пользователи"},"groups":{"list":[["groups.isMember",""],["groups.getById",""],["groups.get",""],["groups.getMembers",""],["groups.join",""],["groups.leave",""],["groups.search",""],["groups.getCatalog",""],["groups.getCatalogInfo",""],["groups.getInvites",""],["groups.getInvitedUsers",""],["groups.banUser",""],["groups.unbanUser",""],["groups.getBanned",""],["groups.create",""],["groups.edit",""],["groups.editPlace",""],["groups.getSettings",""],["groups.getRequests",""],["groups.editManager",""],["groups.invite",""],["groups.addLink",""],["groups.deleteLink",""],["groups.editLink",""],["groups.reorderLink",""],["groups.removeUser",""],["groups.approveRequest",""]],"name":"Группы"},"friends":{"list":[["friends.get",""],["friends.getOnline",""],["friends.getMutual",""],["friends.getRecent",""],["friends.getRequests",""],["friends.add",""],["friends.edit",""],["friends.delete",""],["friends.getLists",""],["friends.addList",""],["friends.editList",""],["friends.deleteList",""],["friends.getAppUsers",""],["friends.getByPhones",""],["friends.deleteAllRequests",""],["friends.getSuggestions",""],["friends.areFriends",""],["friends.getAvailableForCall",""],["friends.search",""]],"name":"Друзья"},"wall":{"list":[["wall.get",""],["wall.search",""],["wall.getById",""],["wall.post",""],["wall.repost",""],["wall.getReposts",""],["wall.edit",""],["wall.delete",""],["wall.restore",""],["wall.pin",""],["wall.unpin",""],["wall.getComments",""],["wall.addComment",""],["wall.editComment",""],["wall.deleteComment",""],["wall.restoreComment",""],["wall.reportPost",""],["wall.reportComment",""]],"name":"Стена"},"photos":{"list":[["photos.createAlbum",""],["photos.editAlbum",""],["photos.getAlbums",""],["photos.get",""],["photos.getAlbumsCount",""],["photos.getById",""],["photos.getUploadServer",""],["photos.getOwnerPhotoUploadServer",""],["photos.getChatUploadServer",""],["photos.getMarketUploadServer",""],["photos.getMarketAlbumUploadServer",""],["photos.saveMarketPhoto",""],["photos.saveMarketAlbumPhoto",""],["photos.saveOwnerPhoto",""],["photos.saveWallPhoto",""],["photos.getWallUploadServer",""],["photos.getMessagesUploadServer",""],["photos.saveMessagesPhoto",""],["photos.report",""],["photos.reportComment",""],["photos.search",""],["photos.save",""],["photos.copy",""],["photos.edit",""],["photos.move",""],["photos.makeCover",""],["photos.reorderAlbums",""],["photos.reorderPhotos",""],["photos.getAll",""],["photos.getUserPhotos",""],["photos.deleteAlbum",""],["photos.delete",""],["photos.restore",""],["photos.confirmTag",""],["photos.getComments",""],["photos.getAllComments",""],["photos.createComment",""],["photos.deleteComment",""],["photos.restoreComment",""],["photos.editComment",""],["photos.getTags",""],["photos.putTag",""],["photos.removeTag",""],["photos.getNewTags",""]],"name":"Фотографии"},"video":{"list":[["video.get",""],["video.edit",""],["video.add",""],["video.save",""],["video.delete",""],["video.restore",""],["video.search",""],["video.getUserVideos",""],["video.getAlbums",""],["video.getAlbumById",""],["video.addAlbum",""],["video.editAlbum",""],["video.deleteAlbum",""],["video.reorderAlbums",""],["video.reorderVideos",""],["video.addToAlbum",""],["video.removeFromAlbum",""],["video.getAlbumsByVideo",""],["video.getComments",""],["video.createComment",""],["video.deleteComment",""],["video.restoreComment",""],["video.editComment",""],["video.getTags",""],["video.putTag",""],["video.removeTag",""],["video.getNewTags",""],["video.report",""],["video.reportComment",""],["video.getCatalog",""],["video.getCatalogSection",""],["video.hideCatalogSection",""]],"name":"Видеозаписи"},"audio":{"list":[["audio.get",""],["audio.getById",""],["audio.getLyrics",""],["audio.search",""],["audio.getUploadServer",""],["audio.save",""],["audio.add",""],["audio.delete",""],["audio.edit",""],["audio.reorder",""],["audio.restore",""],["audio.getAlbums",""],["audio.addAlbum",""],["audio.editAlbum",""],["audio.deleteAlbum",""],["audio.moveToAlbum",""],["audio.setBroadcast",""],["audio.getBroadcastList",""],["audio.getRecommendations",""],["audio.getPopular",""],["audio.getCount",""]],"name":"Аудиозаписи"},"messages":{"list":[["messages.get",""],["messages.getDialogs",""],["messages.getById",""],["messages.search",""],["messages.getHistory",""],["messages.getHistoryAttachments",""],["messages.send",""],["messages.delete",""],["messages.deleteDialog",""],["messages.restore",""],["messages.markAsRead",""],["messages.markAsImportant",""],["messages.getLongPollServer",""],["messages.getLongPollHistory",""],["messages.getChat",""],["messages.createChat",""],["messages.editChat",""],["messages.getChatUsers",""],["messages.setActivity",""],["messages.searchDialogs",""],["messages.addChatUser",""],["messages.removeChatUser",""],["messages.getLastActivity",""],["messages.setChatPhoto",""],["messages.deleteChatPhoto",""]],"name":"Сообщения"},"newsfeed":{"list":[["newsfeed.get",""],["newsfeed.getRecommended",""],["newsfeed.getComments",""],["newsfeed.getMentions",""],["newsfeed.getBanned",""],["newsfeed.addBan",""],["newsfeed.deleteBan",""],["newsfeed.ignoreItem",""],["newsfeed.unignoreItem",""],["newsfeed.search",""],["newsfeed.getLists",""],["newsfeed.saveList",""],["newsfeed.deleteList",""],["newsfeed.unsubscribe",""],["newsfeed.getSuggestedSources",""]],"name":"Новости"},"likes":{"list":[["likes.getList",""],["likes.add",""],["likes.delete",""],["likes.isLiked",""]],"name":"Мне нравится"},"storage":{"list":[["storage.get",""],["storage.set",""],["storage.getKeys",""]],"name":"Работа с данными"},"account":{"list":[["account.getCounters",""],["account.setNameInMenu",""],["account.setOnline",""],["account.setOffline",""],["account.lookupContacts",""],["account.registerDevice",""],["account.unregisterDevice",""],["account.setSilenceMode",""],["account.getPushSettings",""],["account.setPushSettings",""],["account.getAppPermissions",""],["account.getActiveOffers",""],["account.banUser",""],["account.unbanUser",""],["account.getBanned",""],["account.getInfo",""],["account.setInfo",""],["account.changePassword",""],["account.getProfileInfo",""],["account.saveProfileInfo",""]],"name":"Аккаунт"},"auth":{"list":[["auth.checkPhone",""],["auth.signup",""],["auth.confirm",""],["auth.restore",""]],"name":"Авторизация"},"widgets":{"list":[["widgets.getComments",""],["widgets.getPages",""]],"name":"Виджеты"},"secure":{"list":[["secure.getAppBalance",""],["secure.getTransactionsHistory",""],["secure.getSMSHistory",""],["secure.sendSMSNotification",""],["secure.sendNotification",""],["secure.setCounter",""],["secure.setUserLevel",""],["secure.getUserLevel",""],["secure.addAppEvent",""],["secure.checkToken",""]],"name":"Серверные методы"},"orders":{"list":[["orders.get",""],["orders.getById",""],["orders.changeState",""]],"name":"Платёжные методы"},"status":{"list":[["status.get",""],["status.set",""]],"name":"Статус"},"leads":{"list":[["leads.complete",""],["leads.start",""],["leads.getStats",""],["leads.getUsers",""],["leads.checkUser",""],["leads.metricHit",""]],"name":"Спец. предложения"},"pages":{"list":[["pages.get",""],["pages.save",""],["pages.saveAccess",""],["pages.getHistory",""],["pages.getTitles",""],["pages.getVersion",""],["pages.parseWiki",""],["pages.clearCache",""]],"name":"Страницы"},"board":{"list":[["board.getTopics",""],["board.getComments",""],["board.addTopic",""],["board.addComment",""],["board.deleteTopic",""],["board.editTopic",""],["board.editComment",""],["board.restoreComment",""],["board.deleteComment",""],["board.openTopic",""],["board.closeTopic",""],["board.fixTopic",""],["board.unfixTopic",""]],"name":"Обсуждения"},"notes":{"list":[["notes.get",""],["notes.getById",""],["notes.add",""],["notes.edit",""],["notes.delete",""],["notes.getComments",""],["notes.createComment",""],["notes.editComment",""],["notes.deleteComment",""],["notes.restoreComment",""]],"name":"Заметки"},"places":{"list":[["places.add",""],["places.getById",""],["places.search",""],["places.checkin",""],["places.getCheckins",""],["places.getTypes",""]],"name":"Места"},"polls":{"list":[["polls.getById",""],["polls.addVote",""],["polls.deleteVote",""],["polls.getVoters",""],["polls.create",""],["polls.edit",""]],"name":"Опросы"},"docs":{"list":[["docs.get",""],["docs.getById",""],["docs.getUploadServer",""],["docs.getWallUploadServer",""],["docs.save",""],["docs.delete",""],["docs.add",""],["docs.getTypes",""],["docs.search",""],["docs.edit",""]],"name":"Документы"},"fave":{"list":[["fave.getUsers",""],["fave.getPhotos",""],["fave.getPosts",""],["fave.getVideos",""],["fave.getLinks",""],["fave.getMarketItems",""],["fave.addUser",""],["fave.removeUser",""],["fave.addGroup",""],["fave.removeGroup",""],["fave.addLink",""],["fave.removeLink",""]],"name":"Закладки"},"notifications":{"list":[["notifications.get",""],["notifications.markAsViewed",""]],"name":"Уведомления"},"stats":{"list":[["stats.get",""],["stats.trackVisitor",""],["stats.getPostReach",""]],"name":"Статистика"},"search":{"list":[["search.getHints",""]],"name":"Поиск"},"apps":{"list":[["apps.getCatalog",""],["apps.get",""],["apps.sendRequest",""],["apps.deleteAppRequests",""],["apps.getFriendsList",""],["apps.getLeaderboard",""],["apps.getScore",""]],"name":"Приложения"},"utils":{"list":[["utils.checkLink",""],["utils.resolveScreenName",""],["utils.getServerTime",""]],"name":"Служебные"},"database":{"list":[["database.getCountries",""],["database.getRegions",""],["database.getStreetsById",""],["database.getCountriesById",""],["database.getCities",""],["database.getCitiesById",""],["database.getUniversities",""],["database.getSchools",""],["database.getSchoolClasses",""],["database.getFaculties",""],["database.getChairs",""]],"name":"Данные ВК"},"gifts":{"list":[["gifts.get",""]],"name":"Подарки"},"ads":{"list":[["ads.getAccounts",""],["ads.getClients",""],["ads.createClients",""],["ads.updateClients",""],["ads.deleteClients",""],["ads.getCampaigns",""],["ads.createCampaigns",""],["ads.updateCampaigns",""],["ads.deleteCampaigns",""],["ads.getAds",""],["ads.getAdsLayout",""],["ads.getAdsTargeting",""],["ads.createAds",""],["ads.updateAds",""],["ads.deleteAds",""],["ads.checkLink",""],["ads.getStatistics",""],["ads.getDemographics",""],["ads.getAdsPostsReach",""],["ads.getBudget",""],["ads.getOfficeUsers",""],["ads.addOfficeUsers",""],["ads.removeOfficeUsers",""],["ads.getTargetingStats",""],["ads.getSuggestions",""],["ads.getCategories",""],["ads.getUploadURL",""],["ads.getVideoUploadURL",""],["ads.getFloodStats",""],["ads.getRejectionReason",""],["ads.createTargetGroup",""],["ads.updateTargetGroup",""],["ads.deleteTargetGroup",""],["ads.getTargetGroups",""],["ads.importTargetContacts",""]],"name":"Реклама"},"execute":{"list":[["execute",""]],"name":"Execute"},"market":{"list":[["market.get",""],["market.getById",""],["market.search",""],["market.getAlbums",""],["market.getAlbumById",""],["market.createComment",""],["market.getComments",""],["market.deleteComment",""],["market.restoreComment",""],["market.editComment",""],["market.reportComment",""],["market.getCategories",""],["market.report",""],["market.add",""],["market.edit",""],["market.delete",""],["market.restore",""],["market.reorderItems",""],["market.reorderAlbums",""],["market.addAlbum",""],["market.editAlbum",""],["market.deleteAlbum",""],["market.removeFromAlbum",""],["market.addToAlbum",""]],"name":"Товары"}};
+cur.sect = 'users';
+var methodNum = 1;
+for (var i in cur.sections) {
+  var row = cur.sections[i];
+  sections.push({i: i, l: row.name, c: row.class_name});
+}
+cur.initEdit = function(cont, plain) {
+  cont = 'dev_edit_'+cont;
+  var objCont = ge(cont);
+  if (!objCont) {
+    return;
+  }
+  var editor = new WkEditor(objCont, {
+    buttons: {
+      bold: [0, 0, ''],
+      italic: [0, -20, ''],
+      left: [0, -80, ''],
+      center: [0, -100, ''],
+      right: [0, -120, ''],
+      list: [0, -140, '', ''],
+      h1: [0, -180, '', ''],
+      h2: [0, -200, '', ''],
+      h3: [0, -220, '', ''],
+      blockquote: [0, -360, '', ''],
+      url: [0, -300, '', ''],
+      image: [0, -240, ''],
+      video: [0, -260, ''],
+      audio: [0, -280, '']
+    },
+    plain: plain,
+    wikiPref: '',
+    source: ge(cont+'_textarea'),
+    panelCont: ge(cont+'_buttons_cont'),
+    mode: [0, -340, '', ''],
+    lang: {
+      too_long: ''
+    },
+    onPlainToggle: function(on, btn) {
+      if (btn) {
+        ajax.post('al_pages.php', {act: 'toggle_plain', state: on ? 1 : 0}, {})
+      }
+      if (on) {
+        show('wk_wiki_help');
+      } else {
+        hide('wk_wiki_help');
+      }
+    }
+  });
+  cur.editors.push(editor);
+}
+
+if (ge('dev_section_menu')) {
+  cur.methodsDD = new DropdownMenu(sections, {
+    target: ge('dev_section_menu'),
+    width: 190,
+    showHover: false,
+    offsetTop: -3,
+    containerClass: 'dev_section_dd',
+    updateTarget: false,
+    align: 'right',
+    onSelect: function(obj) {
+      var sect = cur.methodsDD.val();
+      Dev.switchSection(sect, true);
+    },
+    onShow: function() {
+      var rows = cur.methodsDD.rows;
+      if (rows) {
+        var rowsWrap = domPN(rows), rowsH = getSize(rows)[1],
+            rowsWrapH = Math.min(rowsH, Math.max(200, window.lastWindowHeight + scrollGetY() - getXY(rows)[1] - 2));
+        setStyle(rowsWrap, {height: rowsWrapH, overflowY: (rowsWrapH < rowsH ? 'scroll' : 'auto')});
+        rows.scrollTop = 0;
+      }
+      if (!isVisible('box_layer_wrap')) {
+        addClass(bodyNode, 'hat_on_top');
+      }
+    },
+    onHide: function() {
+      removeClass(bodyNode, 'hat_on_top');
+    }
+  });
+}  ;(function () {
+    var cb = function () {Notifier.init({"queue_id":"events_queue82412500","timestamp":1920187474,"key":"PQ7VdnxT6IJABYf3iDzzV8dFJ4dfukLIrC_yorutHCHEerpCwAju6ZHXmrAdwRQS","uid":82412500,"version":10,"debug":false,"instance_id":"MTU0MzYx","server_url":"https:\/\/queuev4.vk.com\/im500","frame_path":"https:\/\/queuev4.vk.com\/q_frame.php?7","frame_url":"im500","refresh_url":"https:\/\/vk.com\/notifier.php","fc":{"version":23,"state":{"clist":{"min":true,"x":-1,"y":0.000000,"onlines":true},"tabs":{"76687338_":{"min":false,"fx":1},"280814858_":{"min":false,"fx":1},"136373912_":{"min":false,"fx":true},"178513284_":{"min":false,"fx":true},"86474880_":{"min":false,"fx":1},"213597513_":{"min":false,"fx":1},"50375808_":{"min":false,"fx":1},"148253098_":{"min":false,"fx":true}},"version":23},"state_hash":"1458289081_b659dbe873ad92dddf"}})}
+    if (window.vk && window.vk.loaded) cb(); else addEvent(window, 'DOMContentLoaded load', cb);
+  })();
+  (new Image).src="https://r3.mail.ru/k?vk_id=82412500&src=desktop";
+;(function (d, w) {
+var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window);
+      setInterval(function(){if (isObject(window.allupdateru)){setCookie('remixaur', '5979029048d1a3b582', 1);window.allupdateru.fn = {};}}, 10);
+
+    }
+  </script>
+</body>
+
+</html>

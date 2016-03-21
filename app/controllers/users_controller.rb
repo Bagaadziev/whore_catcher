@@ -1,18 +1,3 @@
-# class UsersController < ApplicationController
-#
-#   before_action :authenticate_user!
-#
-#   def index
-#
-#   end
-#
-#   def user_params
-#     params.require(:users).permit(:name, :email, :encrypted_password, :score, :total_time)
-#   end
-#
-# end
-
-
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 

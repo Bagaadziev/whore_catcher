@@ -61,7 +61,7 @@ $(document).ready ->
             console.log timerId
             $.getJSON '/scores', (data) =>
               $.each data, (i, score) ->
-                $('.scores').append("<li>#{i})<b>#{score.whore_count}</b> >#{score.user.name} (#{score.total_time / 1000})</li>")
+                $('.scores').append("<li>#{++i})<b>#{score.whore_count}</b> >#{score.user.name} (#{score.total_time / 1000})</li>")
 
               false
 
@@ -105,8 +105,8 @@ $(document).ready ->
       $('.catcher-head').removeClass('right-direction').addClass 'left-direction'
       $('.catcher-basket').removeClass('right-direction').addClass 'left-direction'
       if right_direction == true
-        $('.catcher-head').css 'left', '+=50px'
-        $('.catcher-basket').css 'left', '+=50px'
+        $('.catcher-head').css 'left', '+=100px'
+        $('.catcher-basket').css 'left', '+=100px'
       right_direction = false
       if $('.catcher').position().left >= '10'
         $('.catcher').css 'left', '-=20px'
@@ -118,8 +118,8 @@ $(document).ready ->
       $('.catcher-head').removeClass('left-direction').addClass 'right-direction'
       $('.catcher-basket').removeClass('left-direction').addClass 'right-direction'
       if right_direction == false
-        $('.catcher-head').css 'left', '-=50px'
-        $('.catcher-basket').css 'left', '-=50px'
+        $('.catcher-head').css 'left', '-=100px'
+        $('.catcher-basket').css 'left', '-=100px'
       right_direction = true
       if $('.catcher').position().left <= '555'
         $('.catcher').css 'left', '+=20px'
