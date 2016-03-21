@@ -61,7 +61,7 @@ $(document).ready ->
             console.log timerId
             $.getJSON '/scores', (data) =>
               $.each data, (i, score) ->
-                $('.scores').append("<li>#{++i})<b>#{score.whore_count}</b> >#{score.user.name} (#{score.total_time / 1000})</li>")
+                $('.scores').append("<li>#{++i})<b>#{score.whore_count}</b> -#{score.user.name} (#{score.total_time / 1000})</li>")
 
               false
 

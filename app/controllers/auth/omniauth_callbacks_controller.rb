@@ -14,7 +14,7 @@ class Auth::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   def facebook
-    @user = User.find_for_facebook_oauth(request.env["omniauth.auth"], current_user)
+    @user = User.find_for_facebook_oauth(request.env["omniauth.auth"])
     self.check_user_exists()
   end
 
