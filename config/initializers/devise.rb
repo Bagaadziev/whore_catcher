@@ -9,6 +9,13 @@ Devise.setup do |config|
   # config.secret_key = '726c5f0c811417ccbc75482dfc6b13533b1d88ff219ac4274839c47b30107202cd0480396b22eec8db5133a124ec76e02bf63bf608b383bf42d0ce6d25777f1e'
   config.omniauth :vkontakte, "5359713", "NSbXAGbSpc38KcSypuWt",  {  :scope => 'email', :image_size => 'original' }
   config.omniauth :facebook, "1074041189338238", "4f0a2fec4204a567bfe9e65a7ad92a4d",  {  :scope => 'email', :image_size => 'original' }
+  config.omniauth :google_oauth2, "183997434266-o5hg13qt2j9498u2esalpfh4l3on6ivb.apps.googleusercontent.com", "16NLXsuLw0zzKlNvZ42gvG32",
+  {
+      :scope => "userinfo.email, userinfo.profile, plus.me",
+      :prompt => "select_account",
+      :image_aspect_ratio => "square",
+      :image_size => 80
+  }
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,

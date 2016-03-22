@@ -214,6 +214,8 @@
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.7.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="oauth2 (v1.1.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth (v1.3.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="omniauth-facebook (v3.0.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="omniauth-google-oauth2 (v0.4.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-oauth2 (v1.4.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="omniauth-vkontakte (v1.3.6, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="orm_adapter (v0.5.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />

@@ -28,6 +28,7 @@ gem 'mini_magick'                                         # A ruby wrapper for I
 gem 'devise'                                              # Devise is a flexible authentication solution for Rails based on Warden.
 gem 'omniauth-vkontakte'
 gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 gem 'omniauth'
 gem 'kaminari'                                            # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+
 gem 'jquery-ui-rails'                                     # jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline

@@ -189,13 +189,22 @@ animation: animationFrames linear 0.8s;
 .finish{
   background-image: asset-url('/images/headpiece.png');
   background-size: cover;
-  height: 250px;
+  height: 300px;
   width: 380px;
   position: relative;
   display: none;
   margin: 0 auto;
   top: 90px;
 
+}
+.developers {
+  position: absolute;
+  left:10% ;
+}
+.developers p{
+
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .total_whore , .total_time{
   margin: 0 auto;

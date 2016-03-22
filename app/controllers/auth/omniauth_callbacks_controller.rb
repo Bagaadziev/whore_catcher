@@ -24,5 +24,8 @@ class Auth::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     self.check_user_exists()
   end
 
-
-end
+  def google_oauth2
+    @user = User.find_for_google_oauth2(request.env["omniauth.auth"], current_user)
+    self.check_user_exists()
+  end
+  end

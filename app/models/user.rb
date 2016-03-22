@@ -17,10 +17,32 @@ class User < ActiveRecord::Base
          :rememberable,
          :trackable,
          :validatable,
-         :omniauthable
+         :omniauthable,
+         :omniauth_providers => [:vkontakte, :facebook, :google_oauth2]
 
 
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+
+  def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+    puts '=-=-=-====-=>>>>'
+    puts '=-=-=-====-=>>>>'
+    puts '=-=-=-====-=>>>>'
+    puts '=-=-=-====-=>>>>'
+    puts '=-=-=-====-=>>>>'
+    puts '=-=-=-====-=>>>>'
+    data = access_token.info
+    user = User.where(:email => data["email"]).first
+    unless user
+      user = User.create(
+          name: data["name"],
+          email: data["email"],
+          password: Devise.friendly_token[0,20],
+          confirmed_at:     Time.now.utc
+      )
+    end
+    user.update_attribute(:avatara_url, data[:image] ) unless user.avatara_url ==  data[:image]
+    user
+  end
 
   def self.find_for_vkontakte_oauth(auth)
     puts '==========>'
@@ -35,7 +57,11 @@ class User < ActiveRecord::Base
       identity.user
     else
       # attributes = { name: [auth.info.first_name, auth.info.last_name].join(' '), email: auth.info.email, password: Devise.friendly_token[0,20], confirmed_at: Time.now.utc, identities_attributes: { provider: auth.provider, uid: auth.uid.to_s } }
-      attributes = { name: [auth.info.first_name, auth.info.last_name].join(' '), email: auth.info.email, password: Devise.friendly_token[0,20], confirmed_at: Time.now.utc }
+      attributes = { name: [auth.info.first_name, auth.info.last_name].join(' '),
+                     email: auth.info.email,
+                     password: Devise.friendly_token[0,20],
+                     confirmed_at: Time.now.utc
+                   }
       puts "attributes"
       puts attributes
       puts "attributes"

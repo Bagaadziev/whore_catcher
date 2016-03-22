@@ -55,6 +55,7 @@ $(document).ready ->
             $('.whore').remove()
             $('.wrapper').addClass('finish-wrapper').slideDown 'slow'
             $('.total_time').html 'Время игры: ' + total_time / 1000
+            $('audio').attr 'src', 'audio/star_wars.mp3'
             console.log counter
             $('.total_whore').html 'ШЛЮХ: ' + counter
             console.log '=-=-==>>>>>>'
@@ -125,8 +126,6 @@ $(document).ready ->
         $('.catcher').css 'left', '+=20px'
         $('.catcher-head').css 'left', '+=20px'
         $('.catcher-basket').css 'left', '+=20px'
-    # var cross1 = intersects($( ".whore" ), $('.catcher'));
-    # console.log(cross1);
     return
   return
 
