@@ -60,7 +60,7 @@ class User < ActiveRecord::Base
       attributes = { name: [auth.info.first_name, auth.info.last_name].join(' '),
                      email: auth.info.email,
                      password: Devise.friendly_token[0,20],
-                     # confirmed_at: Time.now.utc
+                     confirmed_at: Time.now
                    }
       puts "attributes"
       puts attributes
