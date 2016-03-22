@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
           confirmed_at:     Time.now.utc
       )
     end
-    user.update_attribute(:avatara_url, data[:image] ) unless user.avatara_url ==  data[:image]
+    # user.update_attribute(:avatara_url, data[:image] ) unless user.avatara_url ==  data[:image]
     user
   end
 
