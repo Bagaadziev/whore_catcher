@@ -144,16 +144,8 @@
     </content>
     <orderEntry type="jdk" jdkName="RVM: ruby-2.2.2 [whore_catcher]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="actionmailer (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionpack (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="actionview (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activejob (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="andand (v1.3.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v6.3.3.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="awesome_print (v1.6.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v2.1.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
@@ -180,8 +172,8 @@
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.6.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday (v0.9.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="font-awesome-rails (v4.5.0.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="font-awesome-sass (v4.5.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.6, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="grit (v2.0.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml (v4.0.7, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="haml-rails (v0.9.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="has_scope (v0.6.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
@@ -201,10 +193,7 @@
     <orderEntry type="library" scope="PROVIDED" name="less (v2.6.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="less-rails (v2.7.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.0.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mail (v2.6.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="method_source (v0.8.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mime-types (v2.99.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="mini_magick (v4.4.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.0.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.8.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
@@ -226,26 +215,19 @@
     <orderEntry type="library" scope="PROVIDED" name="pry-rails (v0.3.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-remote (v0.1.8, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-stack_explorer (v0.4.9.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="puma (v3.1.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="quiet_assets (v1.1.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-pjax (v0.8.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-deprecated_sanitizer (v1.0.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v1.0.7, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_12factor (v0.0.3, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_admin (v0.8.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails_serve_static_assets (v0.0.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails_stdout_logging (v0.0.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="railties (v4.2.5, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rake (v11.1.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="remotipart (v1.2.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="responders (v2.1.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby_parser (v3.8.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="safe_yaml (v1.0.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.21, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.4, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sexp_processor (v4.7.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form (v3.2.1, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
@@ -258,7 +240,6 @@
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v3.0.0@37a7c2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="twitter-bootstrap-rails (v3.2.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.7.2, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="unicode_utils (v1.4.0, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="warden (v1.2.6, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yard (v0.8.7.6, RVM: ruby-2.2.2 [whore_catcher]) [gem]" level="application" />

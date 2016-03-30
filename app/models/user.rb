@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
 
-  has_many  :scores,         dependent: :destroy
-  has_many  :identities,     dependent: :destroy
+  enum      role:         { gamer: 0, admin: 1 }
+
+  has_many  :scores,      dependent: :destroy
+  has_many  :identities,  dependent: :destroy
 
   accepts_nested_attributes_for :identities
 
@@ -24,12 +26,6 @@ class User < ActiveRecord::Base
   validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
-    puts '=-=-=-====-=>>>>'
-    puts '=-=-=-====-=>>>>'
-    puts '=-=-=-====-=>>>>'
-    puts '=-=-=-====-=>>>>'
-    puts '=-=-=-====-=>>>>'
-    puts '=-=-=-====-=>>>>'
     data = access_token.info
     user = User.where(:email => data["email"]).first
     unless user
@@ -75,15 +71,8 @@ class User < ActiveRecord::Base
       puts user.inspect
 
       return user
-      # Identity.create({})
     end
 
-
-    # if user = User.where(:url => access_token.info.urls.Vkontakte).first
-    #   user
-    # else
-    #   User.create!(:provider => access_token.provider, :url => access_token.info.urls.Vkontakte, :username => access_token.info.name, :nickname => access_token.extra.raw_info.domain, :email => access_token.extra.raw_info.domain+'@vk.com', :password => Devise.friendly_token[0,20])
-    # end
   end
 
   def email_verified?

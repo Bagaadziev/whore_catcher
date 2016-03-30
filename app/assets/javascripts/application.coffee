@@ -5,4 +5,5 @@
 #= require_tree .
 
 # Plugins
-
+#= require bootstrap
+#= require bootstrap-sprockets

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WhoreCatcher</title>
+<link rel="stylesheet" media="all" href="/assets/auth/scores.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/comon.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/style.self-c40dd5932b5eed18eaa7f1c3adfc0c0c3f87fc00b22ecbef7e651e7173cce0ee.css?body=1" data-turbolinks-track="true" />
+<link rel="stylesheet" media="all" href="/assets/application.self-54f95a2a799165be038f676e0ad30021abeeb4f710b6bc1d4ba12dcf20fe3a94.css?body=1" data-turbolinks-track="true" />
+<script src="/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/turbolinks.self-088c452541bc2cb3c0ff28ae33e5c6516d309f7e097363b1d7d062f9cbe5a947.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/game_script.self-12b23a1d21cf0529f1119ae6e079d91cad15c1fedf545998ad930802bc5695c9.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/affix.self-3555752f8a930795ee9e56751a52e6871104ae85d01b3ab8363da3802a5ecc78.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/alert.self-d8b7bd612b3dcfdefb7b5539b9d5848d66ccbd3e7af8bb8d48bfb3288aaa7be8.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/button.self-e74d33ba39500940a78d6fa4d2d64f6ca7fd86d60a2149641f7fde7ba711d8a1.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/carousel.self-35d204878d906298e55bc24553e11fd89b980fc4ffe5792fe36af8c0da289c54.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/collapse.self-056c40532d9f0f126ec17e839f60c942f573fbd61a086e7f156306e3fc5e8c1f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/dropdown.self-e56c2ffee4618411d43ecf15c89273f6223847ad756e1cd17545d04afa732ed4.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/modal.self-62463080dba6b9d024ff0a3192da0e76eacbc683194f3395047c6f5cfa0acb59.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/scrollspy.self-52afd90e8ba97d9f08617a13986e8869d6c4a45751c0bff59a6f91241e722aca.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/tab.self-dad0d5c377f9fae26394484535ebb23ccf68afae084f896af6ea4cdf8c9f6ae0.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/transition.self-3b268d4cd8c79e46ded7392885f72f64ffb5b0d49948a12b8cf9779f6163e13a.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/tooltip.self-facdc69246a072acb927ded77ff655f7c27a518b9357fddd45d119fbc8a0ab9f.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap/popover.self-210cff1fb4b72b71a29b5122180cb5937c8145cd13a934dc838280f1d9607a3e.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" data-turbolinks-track="true"></script>
+<script src="/assets/application.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" data-turbolinks-track="true"></script>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="5JkiMzw8j/owKlNAzDePY3rl41gP1EpEnlCAFOYl6DpXAWt62COfxuhX16WnQDTDjgOk8qh4JHU48tsrZJsLsg==" />
+</head>
+<body>
+<div class='container'>
+<div class='col-md-6 col-md-offset-3'>
+<h2>Log in</h2>
+<form novalidate="novalidate" class="simple_form new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="leFSdO9i1RrvFQQSqL7OrokjcBszp58bL0t7j6YK1mQmeRs9C33FJjdogPfDyXUOfcU3sZQL8SqJ6SCwJLQ17A==" /><div class='form-inputs'>
+<div class="form-group email optional user_email"><label class="email optional control-label" for="user_email">Email</label><input class="string email optional form-control" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" /></div>
+<div class="form-group password optional user_password"><label class="password optional control-label" for="user_password">Password</label><input class="password optional form-control" type="password" name="user[password]" id="user_password" /></div>
+<div class="form-group boolean optional user_remember_me"><div class="checkbox"><input value="0" type="hidden" name="user[remember_me]" /><label class="boolean optional" for="user_remember_me"><input class="boolean optional" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />Remember me</label></div></div>
+</div>
+<div class='form-actions'>
+<input type="submit" name="commit" value="Log in" class="btn btn-default" />
+</div>
+</form>
+<div class='col-md-12'>
+<br>
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<a class="btn btn-block btn-social btn-sm btn-vk" href="/users/auth/vkontakte"><span class='fa fa-vk'></span>Sign in with Vk</a>
+</div>
+<div class='col-md-4'>
+<a class="btn btn-block btn-social btn-sm btn-facebook" href="/users/auth/facebook"><span class='fa fa-facebook'></span>Sign in with Facebook</a>
+</div>
+<div class='col-md-4'>
+<a class="btn btn-block btn-social btn-sm btn-google" href="/users/auth/google_oauth2"><span class='fa fa-google'></span>Sign in with Google</a>
+</div>
+</div>
+<br>
+<div class='col-md-12'>
+<div class='row'>
+<a href="/users/sign_up">Sign up</a>
+</div>
+<div class='row'>
+<a href="/users/password/new">Forgot your password?</a>
+</div>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

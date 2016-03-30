@@ -33,6 +33,8 @@ gem 'omniauth'
 gem 'kaminari'                                            # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+
 gem 'jquery-ui-rails'                                     # jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline
 gem 'humanize_boolean'                                    # Adds the humanize method for true and false to provide 'Yes' and 'No' respectively.
+gem 'bower-rails'                                         #
+gem 'font-awesome-sass', '~> 4.5.0'
 
 group :development do
   gem 'better_errors'                                      # More Flexible Errors Pages
