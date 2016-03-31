@@ -36,6 +36,10 @@ gem 'humanize_boolean'                                    # Adds the humanize me
 gem 'bower-rails'                                         #
 gem 'font-awesome-sass', '~> 4.5.0'
 
+group :staging, :production do
+  gem 'rails_12factor'                                     # Makes running your Rails app easier. Based on the ideas behind 12factor.net
+end
+
 group :development do
   gem 'better_errors'                                      # More Flexible Errors Pages
   gem 'quiet_assets'                                       # Disable Assets Logger
