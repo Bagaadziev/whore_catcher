@@ -5,12 +5,6 @@ class Ability
 
     user ||= User.new
 
-
-
-    puts '=-=-==-=-=-=>>>>'
-    puts user.inspect
-    puts user.admin?
-    puts '=-=-==-=-=-=>>>>'
     if user.id.present?
       can :manage,    :all               # allow access to dashboard
       # if  user.admin?
